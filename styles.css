@@ -8,66 +8,66 @@ and open the template in the editor.
     Author     : Beau
 */
 
-.container{
-/*    border-bottom:2px solid black;*/
-    max-width: 100%;  
-    
-    
+.container {
+  /*    border-bottom:2px solid black;*/
+  max-width: 100%;
+  width: 100%;
 }
 
-#title{
-    text-align: left;
+body {
+  max-width: 100%;
+}
+#title {
+  text-align: left;
 }
 
-a:hover{
-    text-decoration: none;
-    
+a:hover {
+  text-decoration: none;
 }
-.nav-link:hover{
-    text-decoration: underline;
-
+.nav-link:hover {
+  text-decoration: underline;
 }
 
-#aboutme{
-
-
-background: rgb(255,126,164);
-background: linear-gradient(180deg, rgba(255,126,164,1) 0%, rgba(254,145,164,1) 38%, rgba(255,180,166,1) 96%);
-padding-left: 10%;
-padding-right: 10%;
-text-align: center;
-font: 20px Montserrat, sans-serif;
-height: 300px;
-
+#aboutme {
+  background: rgb(255, 126, 164);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 126, 164, 1) 0%,
+    rgba(254, 145, 164, 1) 38%,
+    rgba(255, 180, 166, 1) 96%
+  );
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  font: 20px Montserrat, sans-serif;
+  height: 300px;
 }
 
-#thanks{
-    text-align: center;
+#thanks {
+  text-align: center;
 }
 
-#projects{
-    text-decoration: underline;
-    
+#projects {
+  text-decoration: underline;
 }
 
-#projects-container{
-padding-left: 10%;
-padding-right: 10%;
-font: 20px Montserrat, sans-serif;
+#projects-container {
+  padding-left: 10%;
+  padding-right: 10%;
+  font: 20px Montserrat, sans-serif;
 }
 
-#projects-body{
-    
+#projects-body {
 }
 
-#someDiv{
-    background-color: #f6f6f6;
-    height: 200px;
+#someDiv {
+  background-color: #f6f6f6;
+  height: 200px;
 }
 
-#footer{
-    height: 100px;
-    text-align: center;
-    font-size: 50px;
-    color: white;
+#footer {
+  height: 100px;
+  text-align: center;
+  font-size: 50px;
+  color: white;
 }
