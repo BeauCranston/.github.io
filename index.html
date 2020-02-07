@@ -58,39 +58,56 @@ and open the template in the editor.
             
             
         
-            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
+            <div id="myCarousel" class="carousel" >
+                <button class="carouselButton carouselButton_left">
+                    
+                    <img src="images/back.svg">
+                    
+                </button>
+                <div class="carousel_trackContainer">
+                    
+                    <ul class="track">
+                        <li class="slide">
+                            <h1>Content 1</h1>
+                        </li>
+                        
+                        <li class="slide">
+                            <h1>Content 2</h1>
+                        </li>
+                        
+                        <li class="slide">
+                            <h1>Content 3</h1>
+                        </li>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
-                    </div>
-                    <div class="item">
-                        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
-                    </div>
-                    <div class="item">
-                        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
-                    </div>
+                    </ul>
 
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
                 </div>
+                <button class="carouselButton carouselButton_right"><img src="images/right.svg"> </button>
+                <div class="carousel_nav">
+                    <button class="caruselIndicator">
+                        <img src="images/circle.png">
+                    </button>
+                    
+                    <button class="caruselIndicator">
+                        <img src="images/circle.png">
+                    </button>
+                    
+                    <button class="caruselIndicator">
+                        <img src="images/circle.png">
+                    </button>
+                    
+
+                    
+                </div>
+                
             </div>
         </div>
+
+
+
+
+
+
 
             <br>
             <div class="container" id="projects-container">
