@@ -13,6 +13,10 @@ and open the template in the editor.
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <link
       href="/docs/4.4/dist/css/bootstrap.min.css"
@@ -37,7 +41,7 @@ and open the template in the editor.
         </a>
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a href="#" class="nav-link text-white">Home</a>
+            <a href="index.html" class="nav-link text-white">Home</a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link text-white">Downloads</a>
@@ -52,43 +56,26 @@ and open the template in the editor.
       </nav>
     </div>
 
-    <div class="container text-white" id="aboutme">
-      <!--            <h3> About Me</h3>
-                    <p> Howdy! I am a Software Developer out of Hamilton, Ontario that is looking to really make a name for myself in this competitive industry 
-                        by delivering home made right out of the oven solutions, just like mama used to make.</p>
-                        
-                    <h4>My Skills</h4>
-                    <ul>
-                        <li> .NET Framework/.NET Core</li>
-                        <li> Creating Games in Unity</li>
-                        <li> HTML & CSS</li>
-                        <li> Java </li>
-                        <li> Android App Development</li>
-                        <li> SQL/PL </li>
-                        <li>JavaScript & PHP</li>
-                    </ul>
-                    <br>-->
-      <!---->
-
+    <div "position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white" id="aboutme">
       <div id="myCarousel" class="carousel">
         <button class="carouselButton carouselButton_left">
           <img src="images/back.svg" />
         </button>
         <div class="carousel_trackContainer">
           <ul class="track">
-            <li class="slide currentSlide">
+            <li class="slide currentSlide text-white">
               <h1>About Me</h1>
               <br />
               <br />
               <p>
                 Howdy! I am a Software Developer out of Hamilton, Ontario that
                 is looking to really make a name for myself in this competitive
-                industry by delivering home made right out of the oven
+                industry by delivering home made, right out of the oven
                 solutions, just like mama used to make.
               </p>
             </li>
 
-            <li class="slide">
+            <li class="slide text-white">
               <h1>My Skills</h1>
               <br />
 
@@ -128,23 +115,23 @@ and open the template in the editor.
       </div>
     </div>
 
-    <br />
-    <div class="container bg-light" id="projects-container">
-      <h1 class="text-dark" id="projects">
+  
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center text-white bg-dark">
+      <h1 class="text-white" id="projects">
         <i class="fas fa-folder"></i> Projects
       </h1>
       <br />
       <div class="row">
         <div class="col-md-3">
-          <div class="card-mb-4 shadow-sm">
-            <img src="images/Guy1.jpg" width="300" height="225" />
+          <div class="card-mb-4 shadow-sm bg-white">
+            <img src="images/Guy1.jpg" width="326" height="225" />
 
-            <div class="card-body">
-              <p class="card-text">2D Dodgeball Unity Game</p>
+            <div class="card-body bg-white">
+              <p class="card-text text-dark">2D Dodgeball Unity Game</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button
-                    type="button"
+                  <a
+                    href="2D_Dodgeball.html"
                     id="view2Ddodgeball"
                     class="btn bg-primary text-white btn-lg btn-outline-secondary"
                   >
@@ -153,6 +140,45 @@ and open the template in the editor.
                       class="spinner-border spinner-border-sm"
                       role="status"
                       aria-hidden="true"
+                      id="spinner1"
+                    ></span>
+                    <span class="sr-only">Loading...</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card-mb-4 shadow-sm bg-white">
+            <svg
+              class="bd-placeholder-img card-img-top"
+              width="100%"
+              height="225"
+              preserveAspectRatio="xMidYMid slice"
+              role="img"
+              aria-label="Placeholder: TBA"
+            >
+              <title>TBA</title>
+              <rect width="100%" height="100%" fill="#55595c"></rect>
+              <text x="45%" y="50%" fill="#FFFFFF" dy=".3em">TBA</text>
+            </svg>
+            <div class="card-body bg-white">
+              <p class="card-text text-dark">TBA</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-lg btn-outline-secondary"
+                  >
+                    View
+
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                      id="spinner2"
                     ></span>
                     <span class="sr-only">Loading...</span>
                   </button>
@@ -161,9 +187,8 @@ and open the template in the editor.
             </div>
           </div>
         </div>
-
         <div class="col-md-3">
-          <div class="card-mb-4 shadow-sm">
+          <div class="card-mb-4 shadow-sm bg-white">
             <svg
               class="bd-placeholder-img card-img-top"
               width="100%"
@@ -176,8 +201,8 @@ and open the template in the editor.
               <rect width="100%" height="100%" fill="#55595c"></rect>
               <text x="45%" y="50%" fill="#FFFFFF" dy=".3em">TBA</text>
             </svg>
-            <div class="card-body">
-              <p class="card-text">TBA</p>
+            <div class="card-body bg-white">
+              <p class="card-text text-dark">TBA</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button
@@ -185,6 +210,13 @@ and open the template in the editor.
                     class="btn btn-lg btn-outline-secondary"
                   >
                     View
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                      id="spinner3"
+                    ></span>
+                    <span class="sr-only">Loading...</span>
                   </button>
                 </div>
               </div>
@@ -192,7 +224,7 @@ and open the template in the editor.
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card-mb-4 shadow-sm">
+          <div class="card-mb-4 shadow-sm bg-white">
             <svg
               class="bd-placeholder-img card-img-top"
               width="100%"
@@ -205,8 +237,8 @@ and open the template in the editor.
               <rect width="100%" height="100%" fill="#55595c"></rect>
               <text x="45%" y="50%" fill="#FFFFFF" dy=".3em">TBA</text>
             </svg>
-            <div class="card-body">
-              <p class="card-text">TBA</p>
+            <div class="card-body bg-white">
+              <p class="card-text text-dark">TBA</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button
@@ -214,35 +246,13 @@ and open the template in the editor.
                     class="btn btn-lg btn-outline-secondary"
                   >
                     View
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card-mb-4 shadow-sm">
-            <svg
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225"
-              preserveAspectRatio="xMidYMid slice"
-              role="img"
-              aria-label="Placeholder: TBA"
-            >
-              <title>TBA</title>
-              <rect width="100%" height="100%" fill="#55595c"></rect>
-              <text x="45%" y="50%" fill="#FFFFFF" dy=".3em">TBA</text>
-            </svg>
-            <div class="card-body">
-              <p class="card-text">TBA</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-lg btn-outline-secondary"
-                  >
-                    View
+                    <span
+                      class="spinner-border spinner-border-sm"
+                      role="status"
+                      aria-hidden="true"
+                      id="spinner4"
+                    ></span>
+                    <span class="sr-only">Loading...</span>
                   </button>
                 </div>
               </div>

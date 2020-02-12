@@ -57,10 +57,12 @@ prevButton.addEventListener("click", (e) => {
 
 //when i click the nav indicators move to tha slide
 
+const implementLoading = (loading) => {
+  loading.style.visibility = "visible";
+};
 var viewButton = document.getElementById("view2Ddodgeball");
 
 viewButton.addEventListener("click", (e) => {
   const loadingSymbol = document.querySelector(".spinner-border");
-
-  const yuh = (loadingSymbol.style.visibillity = "truth");
+  implementLoading(loadingSymbol);
 });

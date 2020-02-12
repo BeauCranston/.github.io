@@ -45,15 +45,13 @@ a:hover {
 }
 
 #projects {
+  font: 40px "Montserrat", sans-serif;
 }
 
 #projects-container {
   padding-left: 10%;
   padding-right: 10%;
-  font: 20px Montserrat, sans-serif;
-}
-
-#projects-body {
+  font: 20px "Montserrat", sans-serif;
 }
 
 #someDiv {
@@ -98,10 +96,11 @@ a:hover {
   top: 0;
   bottom: 0;
   width: 100%;
-
+  font: 20px "Montserrat", sans-serif;
   visibility: hidden;
   /*height: 30%;*/
 }
+
 .currentSlide {
   visibility: visible;
 }
