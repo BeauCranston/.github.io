@@ -119,28 +119,25 @@ a:hover {
 
 .carouselButton_left {
   left: -40px;
+  border: none;
 }
 .carouselButton_right {
   right: -40px;
+  border: none;
 }
 
 .caruselIndicator {
-  border: 0;
-  border-radius: 50%;
-  background: black;
+  border: none;
+  background-color: transparent;
 }
 .caruselIndicator img {
-  width: 15px;
-  height: 20px;
-  background: black;
+  width: 30px;
+  height: 10px;
 }
-.caruselIndicator.current- {
-  background: white;
+.current- img {
+  content: url("images/indicatorSelected2.png");
 }
 
-.caruselIndicator.current- img {
-  background: white;
-}
 .carousel_nav {
   margin-top: 300px;
 }

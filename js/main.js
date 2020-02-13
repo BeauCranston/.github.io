@@ -35,6 +35,7 @@ const moveDot = (container, currentDot, targetDot) => {
   currentDot.classList.remove("current-");
   targetDot.classList.add("current-");
 };
+
 //when i click right move slides to the right
 nextButton.addEventListener("click", (e) => {
   const currentSlide = track.querySelector(".currentSlide");
@@ -42,6 +43,7 @@ nextButton.addEventListener("click", (e) => {
   moveToSlide(track, currentSlide, nextSlide);
   const currentDot = dotsNav.querySelector(".current-");
   const nextDot = currentDot.nextElementSibling;
+
   moveDot(dotsNav, currentDot, nextDot);
 });
 
