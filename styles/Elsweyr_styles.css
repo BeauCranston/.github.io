@@ -13,7 +13,7 @@ h1 {
 }
 
 .bg {
-  background-image: url("images/canvasBackground.jpg");
+  background-image: url("pageBackground.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -204,11 +204,11 @@ h1 {
   -noz-transition: max-height 0.7s;
 }
 
-#helpButton {
+/* #helpButton {
   background-color: red;
   color: white;
   font-family: arial black;
-}
+} */
 
 #gameover {
   width: 100%;

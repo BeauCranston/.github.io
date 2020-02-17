@@ -22,6 +22,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c6a377a746.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -61,13 +65,13 @@
       ></div>
     </div>
 
-    <div class="bg">
+    <div class="bg" style="background-image: url(images/pageBackground.jpg);">
       <div id="gameover">
         <p>Game Over!</p>
         <p id="winner"></p>
         <input id="playAgainBtn" type="button" value="Play Again!" />
       </div>
-      <div id="helpContent">
+      <div id="helpContent" class="bg-dark text-white">
         Click The Button For Help! This is a turn based dice game where each
         player will roll their dice which will return the value of their attack
         power. After each player rolls, the attack button must be pressed for an
@@ -81,7 +85,12 @@
 
       <div class="row">
         <div class="col-md-2">
-          <input type="button" id="helpButton" value="Help" />
+          <input
+            type="button"
+            id="helpButton"
+            class="btn btn-outline-secondary"
+            value="Help"
+          />
         </div>
 
         <div class="col-md-4" align="center">
@@ -136,6 +145,27 @@
       <img src="images/canvasBackground.jpg" style="display:none" />
       <img src="images/fighter.png" style="display:none" />
       <img src="images/fighter2.png" style="display:none" />
+    </div>
+    <div class="contianer-fluid bg-dark" id="footer">
+      <footer>
+        <div class="row">
+          <div class="col-5">
+            <a
+              onclick=""
+              class="fab fa-linkedin"
+              id="linkedin"
+              href="https://www.linkedin.com/in/beau-cranston-94b9931a0/"
+            ></a>
+          </div>
+          <div class="col-7">
+            <a
+              class="fab fa-hackerrank"
+              id="HackerRank"
+              href="https://www.hackerrank.com/beau2tie"
+            ></a>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="js/elsweyrScript.js"></script>
