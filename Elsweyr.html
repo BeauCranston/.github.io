@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--
+ Statement of Authorship: “I, Beau Cranston, 000397019, certify that this material is my original work.No other person's work has been used without due acknowledgement and I have not made my work available to anyone else.”
+-->
+<html>
+  <head>
+    <title>Box Block Solutions</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/Elsweyr_styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link
+      href="/docs/4.4/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container bg-white">
+      <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
+        <a class="navbar-brand text-white" href="index.html">
+          Box Block Solutions <i class="fas fa-boxes"></i>
+        </a>
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link text-white">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">Downloads</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">Contact Me</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link text-white">FeedBack</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div
+      class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light border border-dark"
+    >
+      <div class="col-md-5 p-lg-5 mx-auto my-5">
+        <h1 class="display-4 font-weight-normal">Elsweyr Dice Fight!</h1>
+        <p class="lead font-weight-normal">
+          Try your luck with a friend and see who is meant to reign supreme!
+        </p>
+      </div>
+      <div class="product-device box-shadow d-none d-md-block"></div>
+      <div
+        class="product-device product-device-2 box-shadow d-none d-md-block"
+      ></div>
+    </div>
+
+    <div class="bg">
+      <div id="gameover">
+        <p>Game Over!</p>
+        <p id="winner"></p>
+        <input id="playAgainBtn" type="button" value="Play Again!" />
+      </div>
+      <div id="helpContent">
+        Click The Button For Help! This is a turn based dice game where each
+        player will roll their dice which will return the value of their attack
+        power. After each player rolls, the attack button must be pressed for an
+        attack to occur. The attack button will determine which player has the
+        winning roll and subtract the winning roll by the losing roll which is
+        the value that the winning player attacks with. After an attack happens
+        the losing players health will be subtracted by the value of the attack.
+        These steps will be repeated until one of the players health reaches 0.
+        The player who's health stays above 0 is the winner.
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <input type="button" id="helpButton" value="Help" />
+        </div>
+
+        <div class="col-md-4" align="center">
+          <canvas id="gameCanvas" height="400" width="350"></canvas>
+        </div>
+      </div>
+
+      <div id="scoreBoard">
+        <div id="player1Label">
+          <p id="p1Text">Player 1</p>
+          <div id="player1RollLabel">
+            <p>Roll</p>
+            <div id="player1Roll">0</div>
+          </div>
+          <div id="player1HealthLabel">
+            <p>Health</p>
+            <div id="player1Health">10</div>
+          </div>
+        </div>
+
+        <div id="attackLabel">
+          <p>Attack</p>
+          <div id="attack">0</div>
+        </div>
+
+        <div id="player2Label">
+          <p id="p2Text">Player 2</p>
+
+          <div id="player2HealthLabel">
+            <p>Health</p>
+            <div id="player2Health">10</div>
+          </div>
+          <div id="player2RollLabel">
+            <p>Roll</p>
+            <div id="player2Roll">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="buttons">
+        <div id="rollP1">
+          <input type="button" id="rollBtn" value="Roll!" />
+        </div>
+        <div id="attackDiv">
+          <input type="button" id="attackButton" value="Attack!" />
+        </div>
+        <div id="rollP2">
+          <input type="button" id="roll2Btn" value="Roll!" />
+        </div>
+      </div>
+
+      <img src="images/canvasBackground.jpg" style="display:none" />
+      <img src="images/fighter.png" style="display:none" />
+      <img src="images/fighter2.png" style="display:none" />
+    </div>
+
+    <script src="js/elsweyrScript.js"></script>
+  </body>
+</html>
