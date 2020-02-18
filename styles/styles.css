@@ -135,7 +135,7 @@ a:hover {
   height: 10px;
 }
 .current- img {
-  content: url("images/indicatorSelected2.png");
+  content: url("../images/indicatorSelected2.png");
 }
 
 .carousel_nav {
