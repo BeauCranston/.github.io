@@ -57,7 +57,7 @@ prevButton.addEventListener("click", (e) => {
   moveDot(dotsNav, currentDot, previousDot);
 });
 
-//when i click the nav indicators move to tha slide
+//when i click the nav indicators move to the slide
 
 const implementLoading = (loading) => {
   loading.style.visibility = "visible";

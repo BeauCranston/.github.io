@@ -18,6 +18,9 @@ and open the template in the editor.
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/styles.css" />
+
+    <link rel="stylesheet" href="styles/2D Dodgeball_styles.css" />
+
     <link
       href="/docs/4.4/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -107,7 +110,7 @@ and open the template in the editor.
     <div class="row">
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <div
-          class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
+          class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
         >
           <div class="my-3 py-3">
             <h2 class="display-5">2V2 Mode</h2>
@@ -123,11 +126,29 @@ and open the template in the editor.
             />
           </div>
         </div>
+        <div id="teamModeInfo" class="bg-dark text-white">
+          <button id="teamInfoButton">Click For More Information</button>
+          <br />
+          <br />
+          The 2v2 game mode will be played a little bit differently from the
+          original. Since there are two players it will be set up so that when a
+          player gets hit the player is knocked down, and their teammate will be
+          able to revive them. This can happen as long as one teammate is alive
+          making this game mode more of a survival feeling mode with high
+          intensity. Once both players are knocked down the opposing team wins
+          since nobody can revive the players. Players will be able to pull off
+          certain tasks that would not be possible in the regular game mode such
+          as being able to pass the ball to a teammate however the teammate must
+          catch the ball just like if it was being thrown at the player from an
+          enemy. This allows for more of a skill cap in team mode and requires
+          the players to think about what how they coordinate and are more
+          involved in the teamwork aspect of the game.
+        </div>
       </div>
 
       <div class="col-md-5 p-lg-5 mx-auto my-5">
         <div
-          class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
+          class="bg-dark pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden"
         >
           <div class="my-3 py-3">
             <h2 class="display-5">Classic Mode</h2>
@@ -142,6 +163,25 @@ and open the template in the editor.
               src="images/CM_Diagram.png"
             />
           </div>
+        </div>
+        <div id="classicModeInfo" class="bg-dark text-white">
+          <button id="classicInfoButton">Click For More Information</button>
+          <br />
+          <br />
+          The classic game mode is a 1 v 1 match up that will test the users
+          wits and reaction time by trying to out play the opponent with fast
+          paced dodgeball gameplay. The game starts with one ball on the floor
+          and as the game goes on more and more balls are launched onto the
+          court from the cannons. The way in which balls are added to the court
+          is completely randomized. The canons will fire at a random angle with
+          randomized power, and it will come from a randomized cannon. This will
+          make the game increasingly chaotic and skill based since there is no
+          cooldown in which players can throw the ball. The way you score points
+          in this game mode is by either hitting the opponent or catching an
+          opponent’s ball that was thrown. Once a point is scored the game is
+          reset back to one ball, and the players are returned to the start
+          positions. The first player to five points is the winner winner
+          chicken dinner!
         </div>
       </div>
     </div>
@@ -167,5 +207,6 @@ and open the template in the editor.
         </div>
       </footer>
     </div>
+    <script src="js/2dDodgeball.js"></script>
   </body>
 </html>

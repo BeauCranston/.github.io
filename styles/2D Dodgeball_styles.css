@@ -1,0 +1,48 @@
+#classicModeInfo {
+  background-color: white;
+  width: 100%;
+  max-height: 40px;
+  overflow: hidden;
+  float: left;
+  -webkit-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  -noz-transition: max-height 0.7s;
+}
+
+#classicModeInfo.open {
+  max-height: 650px;
+  -webkit-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  -noz-transition: max-height 0.7s;
+}
+
+#classicInfoButton {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: white;
+}
+#teamModeInfo {
+  background-color: white;
+  width: 100%;
+  max-height: 40px;
+  overflow: hidden;
+  float: left;
+  -webkit-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  -noz-transition: max-height 0.7s;
+}
+
+#teamModeInfo.open {
+  max-height: 650px;
+  -webkit-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+  -noz-transition: max-height 0.7s;
+}
+
+#teamInfoButton {
+  background: transparent;
+  border: none;
+  width: 100%;
+  color: white;
+}
