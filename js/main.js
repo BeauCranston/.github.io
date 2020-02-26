@@ -57,14 +57,19 @@ prevButton.addEventListener("click", (e) => {
   moveDot(dotsNav, currentDot, previousDot);
 });
 
-//when i click the nav indicators move to the slide
-
 const implementLoading = (loading) => {
   loading.style.visibility = "visible";
 };
-var viewButton = document.getElementById("view2Ddodgeball");
+var view2dDodgeballButton = document.getElementById("view2Ddodgeball");
 
-viewButton.addEventListener("click", (e) => {
-  const loadingSymbol = document.querySelector(".spinner-border");
+view2dDodgeballButton.addEventListener("click", (e) => {
+  const loadingSymbol = document.getElementById("spinner1");
+  implementLoading(loadingSymbol);
+});
+
+var viewElsweyrButton = document.getElementById("viewElsweyr");
+
+viewElsweyrButton.addEventListener("click", (e) => {
+  const loadingSymbol = document.getElementById("spinner2");
   implementLoading(loadingSymbol);
 });
