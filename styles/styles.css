@@ -1,0 +1,185 @@
+@font-face{
+    font-family: Generica;
+    src:url('../Fonts/Generica.otf');
+}
+
+@font-face{
+    font-family: Gontserrat;
+    src:url('../Fonts/Gontserrat-Regular.ttf')
+}
+
+@font-face{
+    font-family:Rounded-Elegance;
+    src:url('../Fonts/Rounded_Elegance.ttf')
+}
+
+.bg-theme-green{
+    background-color:#67b896;
+
+}
+
+.bg-theme-purple{
+    background-color:#ab32db;
+}
+
+body, html{
+    padding:0;
+    margin: 0;
+}
+
+.nav-link-space{
+    margin-right: 15vw;
+    margin-left: 15vw;
+}
+
+.custom-nav-link{
+    font-size: 1.3em;
+    font-family: Gontserrat;
+}
+/* HERO CONTAINER STUFF!! */
+.hero-container{
+    background-image: url('../images/keyboard.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-color: #25397E;
+    box-shadow:inset 0 0 0 2000px rgba(37, 57, 126, 0.6);
+    padding:0;
+}
+.animation-container{
+    position: relative;
+    height: 600px;
+    width: 100vw;
+    top:25vh;
+
+}
+.avatar{
+    border-radius: 50%;
+    width:300px;
+    height: 300px;
+    position: absolute;
+    background-image: url('../images/me.jpg');
+    background-size: cover;
+    top:30%;
+    left:calc(50vw - 150px);
+
+    
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 140px solid #67b896;
+    position: absolute;
+    top: 82%;
+    left:calc(50vw - 100px);
+}
+#destroyButton{
+    margin-top: 50px;
+    margin-left:-13px;
+}
+.pixel-art{
+    image-rendering: pixelated;
+}
+.character-frame{
+    position: absolute;
+    width:160px;
+    height:160px;
+    overflow: hidden;
+    /* background-color: red; */
+    top:80%; 
+    left:55%; 
+}
+
+/* SECTION STUFF */
+.section-header{
+    color:#eee;
+    font-family:Generica;
+    font-weight: 700;
+    font-size: 4em;
+    
+}
+.section-container{
+    height:100vh;
+}
+/* ANIMATION CLASSES */
+.spin-y{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+
+.roll-away{
+    -webkit-animation:roll-away 4s linear 1, rotate 4s linear infinite;
+    -moz-animation:roll-away 4s linear 1 , rotate 4s linear infinite;
+    animation:roll-away 4s linear 1, rotate 4s linear infinite;
+    
+}
+
+
+.spritesheet{
+    animation: moveSprite 1s steps(7) infinite;
+}
+
+.translate-sprite-Left{
+    animation: translateLeft 3s linear 1;
+}
+.shake {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: 5;
+}
+
+
+
+
+/* ANIMATION KEY FRAMES */
+@keyframes roll-away{
+    0% {top:30%; left:43%;}
+    10% {top:55%; left:43%;}
+    100%{top:55%; left:110%;}
+}
+@keyframes moveSprite{
+    from{
+        transform: translate3d(0px,0,0);
+        -moz-transform: translate3d(0px,0,0);
+        -o-transform: translate3d(0px,0,0);
+        -webkit-transform: translate3d(0px,0,0);
+        -ms-transform: translate3d(0px,0,0);
+    }
+    to{
+        transform: translate3d(-100%,0,0);
+        -moz-transform: translate3d(-100%,0,0);
+        -o-transform: translate3d(-100%,0,0);
+        -webkit-transform: translate3d(-100%,0,0);
+        -ms-transform: translate3d(-100%,0,0);
+    }
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); }}
+
+@-moz-keyframes rotate { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes rotate { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); }}
+
+@keyframes translateLeft{
+    0% {top:80%; left:55%;}
+    100%{top:80%; left:110%;}
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
