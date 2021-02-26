@@ -1,47 +1,47 @@
-var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 700
-});
 
 $(".main").onepage_scroll({
-    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-    easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                     // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-    animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-    pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-    updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-    beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-    afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-    loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-    keyboard: true,                  // You can activate the keyboard controls
-    responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-                                     // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-                                     // the browser's width is less than 600, the fallback will kick in.
-    direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
- });
+    sectionContainer: "section",  
+    easing: "ease",                   
+    animationTime: 1200,             
+    updateURL: false,                 
+    beforeMove: function(index) {},   
+    afterMove: function(index) {
+        if(index === 2){
+            playAboutMeAnimation();
+        }
+    },    
+    loop: false,                      
+    keyboard: true,                  
+    responsiveFallback: false,                                            
+    direction: "vertical"              
+});
 
-function rollAwayAnimation(){
-    var avatar = document.querySelector('.avatar');
-    var sprite = document.getElementById('sprite');
+$("#about-me-link").click((event)=>{$('.main').moveTo(2)})
+$("#my-works-link").click((event)=>{$('.main').moveTo(3)})
+$("#contact-link").click((event)=>{$('.main').moveTo(4)})
+
+function characterSpriteAnimation(sprite, animation, src, callback){
+    var sprite = document.getElementById(sprite);
     var spriteContainer = sprite.parentElement;
-    avatar.classList.remove('spin-y');
-    avatar.classList.add('roll-away');
-    spriteContainer.classList.add('translate-sprite-left')
+    spriteContainer.classList.add(animation);
     sprite.classList.add('spritesheet');
-    sprite.src = './images/Pixel Art/me-run2-Sheet.png'
-    avatar.addEventListener('animationend', ()=>{
-        avatar.style.display='none'
-        console.log('avataranimation ended');
-    });
+    sprite.src = src;
     spriteContainer.addEventListener('animationend', (event)=>{
         spriteContainer.style.display='none'
         console.log('sprite animation ended');
+        if(callback){
+            callback();
+        }
+        
     });
 }
+
 
 var destroyButton = document.getElementById('destroyButton');
 
 destroyButton.addEventListener('click', (event)=>{
     playHeaderAnimation();
+    
 })
 
 function playHeaderAnimation() {
@@ -49,6 +49,22 @@ function playHeaderAnimation() {
     triangle.classList.add('shake');
     triangle.addEventListener('animationend', ()=>{
         triangle.style.display = 'none';
-        rollAwayAnimation();
+        var avatar = document.querySelector('.avatar'); 
+        characterSpriteAnimation('header-sprite', 'header-sprite-animation', './images/Pixel Art/me-run2-Sheet.png')
+        avatar.classList.remove('spin-y');
+        avatar.classList.add('roll-away');
+        avatar.addEventListener('animationend', ()=>{
+            avatar.style.display='none'
+            console.log('avataranimation ended');
+            var subtitle = document.getElementById('subtitle');
+            var subtitleContainer = subtitle.parentElement.parentElement;
+            subtitleContainer.classList.remove('d-none');
+            subtitleContainer.classList.add('fade-in');
+    
+        });
     })
-  }
+}
+
+function playAboutMeAnimation(){
+    characterSpriteAnimation('about-me-sprite', 'about-me-animation', './images/Pixel Art/me-run2-Sheet.png');
+}

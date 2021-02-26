@@ -22,46 +22,102 @@
                     </button>
                 <div class='collapse navbar-collapse' id='navList'>
                     <ul class='navbar-nav mx-auto'>
-                        <li class='nav-item'>
-                            <a data-scroll href='#about-me' class='nav-link custom-nav-link'>About Me</a>
+                        <li class='nav-item' >
+                            <a data-scroll href='#' class='nav-link custom-nav-link'id='about-me-link' >About Me</a>
                         </li>
                         <li class='nav-item'>
-                            <a data-scroll href='#my-works' class='nav-link custom-nav-link nav-link-space'>My Works</a>
+                            <a data-scroll class='nav-link custom-nav-link nav-link-space' href='#' id='my-works-link'>My Works</a>
                         </li>
                         <li class='nav-item'>
-                            <a data-scroll href='#contact' class='nav-link custom-nav-link'>Contact</a>
+                            <a data-scroll class='nav-link custom-nav-link' id='contact-link'>Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class='hero-text-container'>
-                <h1 class='display-1 text-white'>Hi, I'm Beau Cranston</h1>
+            <div class='container-fluid'>
+                <div class='row ml-lg-5 fade-in'>           
+                    <div class='col-lg-11 col-md-11 p-5 bg-theme-navy'>
+                        <h1 class='display-1 text-white ' id='title'>Hi, I'm Beau Cranston</h1>
+                    </div>
+                </div>
+                <div class='row mt-5 d-none ml-lg-5'>           
+                    <div class='col-10 offset-1 p-5 bg-theme-navy'>
+                        <h1 class='display-3 text-white' id='subtitle'>I'm a Full-Stack Web Developer and Game Dev Hobbyist</h1>
+                    </div>
+                </div>
+                
             </div>
-            <div class='animation-container'>
-                <div class='avatar spin-y'>
+            <div class='container-fluid p-0'>
+                <div class='separator mt-4' id='avatar-container'>
+                    <div class='avatar spin-y'>
 
+                    </div>
                 </div>
-                <div class='triangle' >
-                    <button class='btn bg-theme-green grow-on-hover p-0' id='destroyButton'>
-                        <img src='./images/destroyed-planet.png' width='20px' height='20px'/>
-                    </button>
+                <div class='fixed-bottom'>
+                    <div class="row align-items-center " style="height:20%;" id='animation-container'>
+                        <div class='col-2 offset-5 d-flex justify-content-center'>
+                            <div class='triangle mt-2' >
+                                <button class='btn bg-theme-green grow-on-hover p-0' id='destroyButton'>
+                                    <img src='./images/destroyed-planet.png' width='20px' height='20px'/>
+                                </button>
+                            </div>
+                            
+                        </div>
+                        <div class='col-5'>
+                            <div class='position-relative'>
+                                <div class='character-frame' style='bottom: -84px;'>
+                                    <img class="pixel-art" src='./images/Pixel Art/me-idle.png' id='header-sprite'/>
+                                </div>
+                            </div>
+                            
+    
+                        </div>
+                    </div>
                 </div>
-                <div class='character-frame'>
-                    <img class="pixel-art" src='./images/Pixel Art/me-idle.png' id='sprite'/>
-                </div>
+                
             </div>
+
             
         </section>
         <section class='container-fluid section-container bg-theme-green' id='about-me'>
+            <div class='position-relative w-100'>   
+                <div class='character-frame'style='right:-100px;'>
+                    <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='about-me-sprite'/>
+                </div>    
+
+            </div>              
             <div class='row'>
                 <div class='col text-center pt-5'>
                     <h1 class='section-header pt-5'>About Me</h1>
                 </div>
             </div>
-            <div class='row'>
-                <div class='col'>
+            <div class='row mt-4 mt-xl-0'>
+                <div class='col-xl-4 offset-xl-8 col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
+                    <div class='info-box bg-white'>
 
+                    </div>
                 </div>
+            </div>
+            <div class='row mt-xl-n5 my-5'>
+                <div class='col-xl-4 offset-xl-0 col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
+                    <div class='info-box bg-white'>
+
+                    </div>
+                </div>
+            </div>
+            <svg class='position-absolute line' style='top:44vh; left:42vw' height="50vh" width="50vw">
+                <line x1="100%" y1="0" x2="30%" y2="310" style="stroke:rgb(255,255,255);stroke-width:5"/>
+            </svg>
+            <svg class='position-absolute line' style='top:53vh; left:15vw;' height="50vh" width="50vw">
+                <line x1="20%" y1="0" x2="40%" y2="50%" style="stroke:rgb(255,255,255);stroke-width:5"/>
+            </svg>
+            <div class='row d-flex justify-content-center'>
+                <div class='col-xl-4 col-lg-6 col-md-10 col-sm-12'>
+                    <div class='info-box bg-white'>
+
+                    </div>
+                </div>
+
             </div>
             
         </section>
@@ -73,8 +129,9 @@
             </div>
             <div class='row'>
                 <div class='col'>
-
+                    
                 </div>
+                
             </div>
             
         </section>
