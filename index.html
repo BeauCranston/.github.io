@@ -36,18 +36,18 @@
             </div>
             <div class='container-fluid'>
                 <div class='row ml-lg-5 fade-in'>           
-                    <div class='col-lg-11 col-md-11 p-5 bg-theme-navy'>
+                    <div class='col-lg-11 col-md-11 p-5 bg-theme-navy rounded-lg'>
                         <h1 class='display-1 text-white ' id='title'>Hi, I'm Beau Cranston</h1>
                     </div>
                 </div>
-                <div class='row mt-5 d-none ml-lg-5'>           
-                    <div class='col-10 offset-1 p-5 bg-theme-navy'>
+                <div class='row mt-5 d-block d-md-none ml-lg-5'>           
+                    <div class='col-10 offset-1 p-5 bg-theme-navy rounded-lg'>
                         <h1 class='display-3 text-white' id='subtitle'>I'm a Full-Stack Web Developer and Game Dev Hobbyist</h1>
                     </div>
                 </div>
                 
             </div>
-            <div class='container-fluid p-0'>
+            <div class='container-fluid p-0 d-none d-md-block'>
                 <div class='separator mt-4' id='avatar-container'>
                     <div class='avatar spin-y'>
 
@@ -60,6 +60,7 @@
                                 <button class='btn bg-theme-green grow-on-hover p-0' id='destroyButton'>
                                     <img src='./images/destroyed-planet.png' width='20px' height='20px'/>
                                 </button>
+                                <img style="margin-left: -10px; margin-top: 5px;" src='/images/up-arrow.png' width='20px' height='20px'/>
                             </div>
                             
                         </div>
@@ -73,15 +74,12 @@
     
                         </div>
                     </div>
-                </div>
-                
-            </div>
-
-            
+                </div>      
+            </div>           
         </section>
         <section class='container-fluid section-container bg-theme-green' id='about-me'>
             <div class='position-relative w-100'>   
-                <div class='character-frame'style='right:-100px;'>
+                <div class='character-frame d-none' style='top:0%; right:0%;'>
                     <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='about-me-sprite'/>
                 </div>    
 
@@ -91,29 +89,65 @@
                     <h1 class='section-header pt-5'>About Me</h1>
                 </div>
             </div>
-            <div class='row mt-4 mt-xl-0'>
-                <div class='col-xl-4 offset-xl-8 col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
-                    <div class='info-box bg-white'>
+            <div class='row mt-4 mt-xl-0 mb-xl-n5'>
+                <div class='col-xl-4 offset-xl-8 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
+                    <div class='info-box bg-white d-none p-3' id='info-box-right'>
+                        <h3 class='text-center info-box-title mb-3'>Education</h3>
+                        <div class='info-box-text'>
+                            <p>- Mohawk College 3 Year Advanced Diploma</p>
+                        </div>
+
+                    </div>
+                    <div class='line top-border ' id='top-border-right'>
 
                     </div>
                 </div>
             </div>
             <div class='row mt-xl-n5 my-5'>
-                <div class='col-xl-4 offset-xl-0 col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
-                    <div class='info-box bg-white'>
+                <div class='col-xl-4 offset-xl-0 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center mt-xl-n5'>
+                    <div class='info-box bg-white d-none p-3' id='info-box-left'>
+                        <h3 class=' info-box-title mb-3 text-center'>Hobbies</h3>
+                        <div class='info-box-text'>
+                            <p>- Game Development</p>
+                            <p>- Music</p>
+                            <p>- Basketball</p>                                    
+                        </div>
+                    </div>
+                    <div class='line top-border' id='top-border-left' >
 
                     </div>
                 </div>
             </div>
-            <svg class='position-absolute line' style='top:44vh; left:42vw' height="50vh" width="50vw">
+            <svg class='position-absolute line d-none' style='top:44vh; left:42vw' height="50vh" width="50vw" id='line-1'>
                 <line x1="100%" y1="0" x2="30%" y2="310" style="stroke:rgb(255,255,255);stroke-width:5"/>
             </svg>
-            <svg class='position-absolute line' style='top:53vh; left:15vw;' height="50vh" width="50vw">
+            <svg class='position-absolute line d-none' style='top:50vh; left:15vw;' height="50vh" width="50vw" id='line-2'>
                 <line x1="20%" y1="0" x2="40%" y2="50%" style="stroke:rgb(255,255,255);stroke-width:5"/>
             </svg>
-            <div class='row d-flex justify-content-center'>
-                <div class='col-xl-4 col-lg-6 col-md-10 col-sm-12'>
-                    <div class='info-box bg-white'>
+            <div class='row d-flex justify-content-center mt-xl-n4'>
+                <div class='col-xl-4 col-md-10 col-sm-12'>
+                    <div class='info-box bg-white d-none p-3' id='info-box-center'>
+                        <h3 class='text-center info-box-title mb-3'>Goals</h3>
+                        <div class='row'>
+                            <div class='col text-center'>
+                                <div class='info-box-text'>
+                                    <p class='info-box-subtitle'>Current Goals: </p>
+                                    <p class="adjustable-text-size">        - Master C# (Unity, ASP.NET), and Node.Js Tech Stacks</p>
+                                    <p class="adjustable-text-size">        - Learn Web Assembly, Containerization, and Blazor</p>                                    
+                                </div>
+                            </div>
+                            <div class='col text-center'>
+                                <div class='info-box-text border-left'>                                 
+                                    <p class='info-box-subtitle'>Career Goals:</p> 
+                                    <p class="adjustable-text-size">    - Become a Software Architect</p>
+                                    <p class="adjustable-text-size">    - Start My Own Game Copmany</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class='line top-border' id='top-border-center'>
 
                     </div>
                 </div>
@@ -128,6 +162,12 @@
                 </div>
             </div>
             <div class='row'>
+                <div class='col'>
+                    
+                </div>
+                <div class='col'>
+                    
+                </div>
                 <div class='col'>
                     
                 </div>

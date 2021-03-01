@@ -30,6 +30,9 @@ body, html{
     scroll-behavior: smooth;
 }
 
+.gontserrat{
+    font-family: Gontserrat;
+}
 .nav-link-space{
     margin-right: 15vw;
     margin-left: 15vw;
@@ -97,7 +100,7 @@ body, html{
 
 #destroyButton{
     margin-top: 50px;
-    margin-left:-13px;
+    margin-left:-11px;
 }
 .pixel-art{
     image-rendering: pixelated;
@@ -111,9 +114,38 @@ body, html{
 /* ======================================= ABOUT ME STUFF ==================================================== */
 
 .info-box{
-    border-radius: 5%;
+    border-radius: 10px;
     width:100%;
-    height: 250px;
+    height: 300px;
+}
+.top-border{
+    border-top: 2px solid white;
+    width:100%;
+    height:300px;
+    background-color: transparent;
+}
+
+.info-box-title{
+    font-size: 2em;
+    font-family: gontserrat;
+    color:#333;
+
+}
+.info-box-subtitle{
+    font-size: 1.2em;
+    font-family: gontserrat;
+    color:#333;
+    margin-bottom: 0.7em;
+}
+.info-box-text{
+    font-size: 1.1em;
+    font-family: sans-serif;
+    color:#333;
+}
+
+#top-border-left{
+    margin-top: -150px;
+    margin-bottom: 50px;
 }
 
 /* =======================================ANIMATION CLASSES =========================================================== */
@@ -155,9 +187,75 @@ body, html{
 .fade-in{
     animation: fade-text 2s ease-in 1;
 }
+/* ===================================================ABOUT ME PAGE ANIMATIONS====================================================== */
+.about-me-right-fall{
+    animation: aboutMeRightFall 0.5s linear 1;
+}
+.about-me-right-run{
+    
+    animation: aboutMeRightRun 1.5s linear 1;
+}
+.about-me-right-jump{
+    
+    animation: aboutMeRightJump 0.5s linear 1;
+}
+.about-me-center-fall{
+    animation: aboutMeCenterFall 1.0s linear 1;
+}
+.about-me-center-run{
+    
+    animation: aboutMeCenterRun 1.0s linear 1;
+}
+.about-me-center-jump{
+    
+    animation: aboutMeCenterJump 1s linear 1;
+}
+.about-me-left-fall{
+    animation: aboutMeLeftFall 0.5s linear 1;
+}
+.about-me-left-run{
+    
+    animation: aboutMeLeftRun 2.0s linear 1;
+}
+@keyframes aboutMeRightFall{
+    0%{ transform-origin: top right; transform: scaleX(-1) translate(0,0);}
+    100%{ transform: scaleX(-1) translate(1vw, 3vh);}
 
-.about-me-animation{
-    animation: aboutMeAnimation 3s linear 1;
+}
+@keyframes aboutMeRightRun{
+    0%{transform-origin: 1vw, 3vh; transform:translate(1vw, 3vh)scaleX(-1);}
+    100%{transform:translate(-24vw,3vh) scaleX(-1);}
+
+}
+@keyframes aboutMeRightJump{
+    0%{transform-origin: -24vw,3vh; transform:translate(-24vw,3vh)scaleX(-1);}
+    100%{transform:translate(-30vw,0.5vh) scaleX(-1);}
+
+}
+@keyframes aboutMeCenterFall{
+    0%{transform-origin: -30vw,0.5vh; transform:translate(-30vw,0.5vh)scaleX(-1);}
+    100%{transform:translate(-34vw,50vh) scaleX(-1);}
+
+}
+@keyframes aboutMeCenterRun{
+    0%{transform-origin: -34vw,50vh; transform:translate(-34vw,50vh)scaleX(-1);}
+    100%{transform:translate(-46vw,50vh) scaleX(-1);}
+
+}
+@keyframes aboutMeCenterJump{
+    0%{transform-origin: -46vw,50vh; transform:translate(-46vw,50vh)scaleX(-1);}
+    100%{transform:translate(-58vw,8vh) scaleX(-1);}
+
+}
+@keyframes aboutMeLeftFall{
+    0%{transform-origin: -58vw,8vh; transform:translate(-58vw,8vh)scaleX(-1);}
+    100%{transform:translate(-64vw,10vh) scaleX(-1);}
+
+}
+@keyframes aboutMeLeftRun{
+    0%{transform-origin: -64vw,10vh; transform:translate(-64vw,10vh)scaleX(-1);}
+    100%{transform:translate(-100vw,10vh) scaleX(-1);}
+
 }
 /*================================= ANIMATION KEY FRAMES ===============================================================*/
 @keyframes fade-text{
@@ -218,12 +316,7 @@ body, html{
 }
 
 
-@keyframes aboutMeAnimation{
-    0%{right: 10vw}
-    25%{top: 10vw}
-    50%{right: 20vw}
-    100%{top: 20vw}
-}
+
 
 /* ===================================================MEDIA RULES ==================================================================== */
 @media only screen and (max-width: 1050px) {
@@ -237,24 +330,13 @@ body, html{
     
 }
 
-@media only screen and (max-width: 810px) {
-    #title{
-        font-size: 9vw;
-    }
-    #subtitle{
-        font-size: 6vw;
-    }
-}
-
-
-
 @media only screen and (max-width: 932px) {
     #avatar-container{
         height:30%;
     }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1199px) {
     .line{
         display: none;
     }
@@ -262,14 +344,37 @@ body, html{
     .info-box{
         height: 200px;
     }
+    .adjustable-text-size{
+        font-size: 1.1em;
+    }
+    
 }
+
+@media only screen and (max-width: 1300px) {
+    .adjustable-text-size{
+        font-size: 0.9em;
+    }
+}
+@media only screen and (min-width: 1199px) {
+    #info-box-left{
+        margin-top: -150px;
+        margin-bottom: 50px;
+    }
+    
+}
+
 
 @media only screen and (max-width: 992px) {
-    .line{
-        display: none;
+    .info-box-title{
+        font-size: 1.5em;
     }
-
-    .info-box{
-        height: 150px;
+    .info-box-subtitle{
+        font-size: 1em;
     }
+    .adjustable-text-size{
+        font-size: 0.8em;
+    }
+    
 }
+
+
