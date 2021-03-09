@@ -81,7 +81,7 @@
                 </svg>
             </div>
             <div class='character-frame d-none' style='top:0%; right:0%;'>
-                <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='about-me-sprite'/>
+                <img src='./images/Pixel Art/me-idle.png' class="flip-x d-none d-xl-block" id='about-me-sprite'/>
             </div>
             <div class='row'>
                 <div class='col-lg-5 col-12 about-me-heading-container'>
@@ -193,7 +193,7 @@
             
         <section class='container-fluid bg-primary' id='my-skills'>
             <div class='character-frame d-none' style='top:0%; left:4.5vw;'>
-                <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='my-skills-sprite'/>
+                <img src='./images/Pixel Art/me-idle.png' class="flip-x d-none d-xl-block" id='my-skills-sprite'/>
             </div>
             <div class='row'>
                 <div class='col text-center pt-4'>
@@ -203,20 +203,42 @@
             <div class='row'>
                 <div class='col'>
                     <div class="honeycomb-grid-container">
-                        <div class="honeycomb-grid-container-item">
-                            <img class="hexagon" src='images/logos/Java.png'/> 
-                            <div class='tech-experience-box'>
-
-                            </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/Java.png' 
+                            data-toggle="popover" data-placement="right" title="Java Experience" 
+                            data-content=""/>
                         </div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/c-sharp.png'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/unity-tab-square-black.png'/></div>
-                        <div class="honeycomb-grid-container-item "><img class="hexagon" src='images/logos/nodejs.png'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/react.png'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/javascript.png'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/html.png'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/CSS3.jpg'/></div>
-                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/bootstrap.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" id='c-sharp-content' src='images/logos/c-sharp.png' 
+                            data-toggle="popover" data-placement="right" title="C# Experience" 
+                            data-content=""/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/unity-tab-square-black.png' 
+                            data-toggle="popover" data-placement="right" title="Unity Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item "><img class="hexagon" src='images/logos/nodejs.png'
+                            data-toggle="popover" data-placement="right" title="Node.Js Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/react.png' 
+                            data-toggle="popover" data-placement="right" title="React Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/javascript.png' 
+                            data-toggle="popover" data-placement="right" title="Javascript Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/html.png' 
+                            data-toggle="popover" data-placement="right" title="HTML Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/CSS3.jpg' 
+                            data-toggle="popover" data-placement="right" title="CSS Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/bootstrap.png' 
+                            data-toggle="popover" data-placement="right" title="Bootstrap Experience" 
+                            data-content="And here's some amazing content. It's very engaging. Right?"/>
+                        </div>
                         
                         
 
@@ -337,7 +359,7 @@
                     <a href="https://www.linkedin.com/in/beau-cranston-94b9931a0/"><img src='./images/logos/LI-In-Bug.png' class='contact-container grow-on-hover'/></a>
                 </div>
                 <div class='col-lg-3 col-10 d-flex offset-1 offset-lg-0 justify-content-center'>
-                    <a href=""><img src='./images/logos/HackerRank_logo.png' class='contact-container grow-on-hover'/></a>
+                    <a href="https://www.hackerrank.com/beau2tie"><img src='./images/logos/HackerRank_logo.png' class='contact-container grow-on-hover'/></a>
                 </div>
             </div>
         </section>

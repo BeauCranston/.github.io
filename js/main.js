@@ -1,7 +1,19 @@
 
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
-})
+});
+$(function () {
+    $('[data-toggle="popover"]').popover()
+});
+
+// Time Spent: 2 Years 
+                            
+//                             C# is my go-to in terms of object-oriented languages. I have  experience with .NET/ASP.NET Framework, and 1 Year experience with .NET Core.
+//                             At my last co-op job I made small scale applications for the company using a Vanilla JS / ASP.NET Web API tech stack, and I got exposure to MVC as well.
+//                             During school I took 2 .NET Courses (.NET, and Advanced .NET respectively). I have experience with advanced concepts such as PLINQ, TAP, expression trees,
+//                             serialization, as well as frameworks such as Identity and Entity
+
+$('#c-sharp-content')
 
 $(".main").onepage_scroll({
     sectionContainer: "section",  
@@ -35,26 +47,12 @@ $(".main").onepage_scroll({
     responsiveFallback: 992,                                            
     direction: "vertical"              
 });
-var shouldScroll = false;
-window.addEventListener('resize',()=>{
-    const mq = window.matchMedia("(min-width:992px)");
-    
-    if(mq.matches == true && shouldScroll == true){
-        console.log('match')
-        window.scrollTo(0, 0);
-        shouldScroll = false;
-    }
-    else{
-        console.log('not match')
-        shouldScroll = true;
-    }
-})
-
 
 
 $("#about-me-link").click((event)=>{$('.main').moveTo(2)})
-$("#my-works-link").click((event)=>{$('.main').moveTo(3)})
-$("#contact-link").click((event)=>{$('.main').moveTo(4)})
+$("#about-me-link").click((event)=>{$('.main').moveTo(3)})
+$("#my-works-link").click((event)=>{$('.main').moveTo(4)})
+$("#contact-link").click((event)=>{$('.main').moveTo(5)})
 
 function characterSpriteAnimation(sprite, animation, src, end, callback){
     var spriteContainer = sprite.parentElement;
@@ -126,13 +124,10 @@ function playAboutMeAnimation(){
 function playMySkillsAnimation(){
     var mySkilsSprite = document.getElementById('my-skills-sprite');
     mySkilsSprite.classList.add('spritesheet');
-    characterSpriteAnimation(mySkilsSprite, 'my-skills-left-fall','./images/Pixel Art/me-fall-Sheet.png', false, ()=>{
-        characterSpriteAnimation(mySkilsSprite, 'my-skills-hit-container','./images/Pixel Art/me-fall-Sheet.png', false, ()=>{
-            characterSpriteAnimation(mySkilsSprite, 'my-skills-plunge','./images/Pixel Art/me-scared-fall-Sheet.png', true, ()=>{
+    characterSpriteAnimation(mySkilsSprite, 'my-skills-plunge','./images/Pixel Art/me-scared-fall-Sheet.png', true, ()=>{
 
-            });
-        });
     });
+
 }
 
 function showInfoBox(infoBox, topBorder){

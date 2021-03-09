@@ -188,13 +188,13 @@ body, html{
 
 .pipe-container{
     position: relative;
-    bottom: 21%;
-    left:1%;
+    bottom: 16.5%;
+    left:2.5vw;
 }
 .pipe{
     position: absolute;
-    width: 260px;
-    height:260px;
+    width: 160px;
+    height:160px;
     z-index: 101;
 }
 /*====================================================================== MY SKILLS STUFF================================================================================ */
@@ -439,36 +439,22 @@ body, html{
 }
 @keyframes aboutMeLeftFall{
     0%{transform-origin: -80vw,25vh; transform:translate(-80vw,25vh)scaleX(-1);}
-    100%{transform:translate(-84vw,51vh) scaleX(-1);}
+    100%{transform:translate(-87vw,51vh) scaleX(-1);}
 
 }
 @keyframes aboutMePipeFall{
-    0%{transform-origin: -84vw,51vh; transform:translate(-84vw,51vh)scaleX(-1);}
-    100%{transform:translate(-84vw,64vh) scaleX(-1);}
+    0%{transform-origin: -87vw,51vh; transform:translate(-87vw,51vh)scaleX(-1);}
+    100%{transform:translate(-87vw,64vh) scaleX(-1);}
 
 }
 /* ==================================MY SKILLS ANIMATIONS ============================================================= */
-.my-skills-left-fall{
-    animation: mySkillsLeftFall 0.5s linear 1;
-}
-.my-skills-hit-container{
-    animation: mySkillsHitContainer 0.2s linear 1;
-}
+
 .my-skills-plunge{
-    animation: mySkillsPlunge 1.5s linear 1;
+    animation: mySkillsPlunge 2s linear 1;
 }
-@keyframes mySkillsLeftFall{
-    0%{ transform-origin: top left; transform: translate(4.5vw,0);}
-    100%{ transform: translate(4.5vw, 13vh);}
 
-}
-@keyframes mySkillsHitContainer{
-    0%{ transform-origin: 4.5vw, 13vh; transform: translate(4.5vw, 13vh);}
-    100%{ transform: translate(1vw, 12vh) rotateZ(-30deg);}
-
-}
 @keyframes mySkillsPlunge{
-    0%{ transform-origin: 1vw, 12vh; transform: translate(-1vw,12vh)rotateZ(-30deg);}
+    0%{ transform-origin: top right; transform: translate(0,0)rotateZ(-30deg);}
     100%{ transform: translate(-1vw, 100vh) rotateZ(-90deg);}
 
 }
@@ -484,7 +470,7 @@ body, html{
 }
 @keyframes roll-away{
     0% {bottom:40vh;}
-    10% {bottom:0; left:40%;}
+    25% {bottom:0; left:40%;}
     100%{bottom:0; left:100%;}
 }
 @keyframes stepThroughSpriteSheet{
@@ -551,7 +537,12 @@ body, html{
         height:30%;
     }
 }
-
+@media only screen and (max-width: 1273px) {
+    #animation-container{
+        margin-top: -115px;
+    }
+    
+}
 @media only screen and (max-width: 1199px) {
     .line{
         display: none;
@@ -563,12 +554,22 @@ body, html{
     .adjustable-text-size{
         font-size: 1.1em;
     }
-    
+    #animation-container{
+        margin-top: -145px;
+    }
 }
+@media only screen and (max-width: 1400px) {
 
+    .pipe-container{
+        left:1.5vw;
+    }
+}
 @media only screen and (max-width: 1300px) {
     .adjustable-text-size{
         font-size: 0.9em;
+    }
+    .pipe-container{
+        left:0.5vw;
     }
 }
 @media only screen and (min-width: 1199px) {
