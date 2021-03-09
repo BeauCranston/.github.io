@@ -15,7 +15,14 @@
   </head>
   <body>
     <div class='container-fluid p-0 main'>
-        <section class='hero-container container-fluid'>
+        <section class='hero-container container-fluid' id='header'>
+            <div class="custom-shape-divider-bottom-1615176798">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
             <div class='navbar navbar-expand-lg navbar-dark p-3 custom-nav' id='nav-bar'>
                 <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navList' aria-controls='navList' aria-expanded='false'>
                     <span class='navbar-toggler-icon'></span>
@@ -23,172 +30,245 @@
                 <div class='collapse navbar-collapse' id='navList'>
                     <ul class='navbar-nav mx-auto'>
                         <li class='nav-item' >
-                            <a data-scroll href='#' class='nav-link custom-nav-link'id='about-me-link' >About Me</a>
+                            <a data-scroll href='#about-me' class='nav-link custom-nav-link'id='about-me-link' >About Me</a>
                         </li>
                         <li class='nav-item'>
-                            <a data-scroll class='nav-link custom-nav-link nav-link-space' href='#' id='my-works-link'>My Works</a>
+                            <a data-scroll class='nav-link custom-nav-link nav-link-space' href='#my-skills' id='my-skills-link'>My Skills</a>
                         </li>
                         <li class='nav-item'>
-                            <a data-scroll class='nav-link custom-nav-link' id='contact-link'>Contact</a>
+                            <a data-scroll class='nav-link custom-nav-link nav-link-space' href='#my-works' id='my-works-link'>My Works</a>
+                        </li>
+                        <li class='nav-item'>
+                            <a data-scroll class='nav-link custom-nav-link' href='#contact' id='contact-link'>Contact</a>
                         </li>
                     </ul>
                 </div>
             </div>
             <div class='container-fluid'>
                 <div class='row ml-lg-5 fade-in'>           
-                    <div class='col-lg-11 col-md-11 p-5 bg-theme-navy rounded-lg'>
-                        <h1 class='display-1 text-white ' id='title'>Hi, I'm Beau Cranston</h1>
+                    <div class='col-lg-11 col-md-11 p-5 rounded-lg'>
+                        <h1 class='text-white r-e' id='title'>Hi, I'm Beau Cranston.</h1>
                     </div>
                 </div>
-                <div class='row mt-5 d-block d-md-none ml-lg-5'>           
-                    <div class='col-10 offset-1 p-5 bg-theme-navy rounded-lg'>
-                        <h1 class='display-3 text-white' id='subtitle'>I'm a Full-Stack Web Developer and Game Dev Hobbyist</h1>
+                <div class='row mt-5 d-block d-lg-none ml-lg-5' id='subtitle-container'>           
+                    <div class='col-10 offset-1 p-5 rounded-lg' >
+                        <h1 class='text-white r-e' id='subtitle'>I'm a Full-Stack Web Developer and Game Dev Hobbyist</h1>
                     </div>
                 </div>
                 
             </div>
-            <div class='container-fluid p-0 d-none d-md-block'>
+            <div class='container-fluid p-0 d-none d-lg-block'>
                 <div class='separator mt-4' id='avatar-container'>
-                    <div class='avatar spin-y'>
+                    <div class='avatar spin-y' id='avatar'>
 
                     </div>
                 </div>
-                <div class='fixed-bottom'>
-                    <div class="row align-items-center " style="height:20%;" id='animation-container'>
-                        <div class='col-2 offset-5 d-flex justify-content-center'>
-                            <div class='triangle mt-2' >
-                                <button class='btn bg-theme-green grow-on-hover p-0' id='destroyButton'>
-                                    <img src='./images/destroyed-planet.png' width='20px' height='20px'/>
-                                </button>
-                                <img style="margin-left: -10px; margin-top: 5px;" src='/images/up-arrow.png' width='20px' height='20px'/>
-                            </div>
-                            
-                        </div>
-                        <div class='col-5'>
-                            <div class='position-relative'>
-                                <div class='character-frame' style='bottom: -84px;'>
-                                    <img class="pixel-art" src='./images/Pixel Art/me-idle.png' id='header-sprite'/>
-                                </div>
-                            </div>
-                            
-    
+
+                <div class="row align-items-center " style="height:180px;" id='animation-container'>
+                    <div class='col-2 offset-5 d-flex justify-content-center'>
+                        <div class='character-frame' >
+                            <img class="pixel-art sprite-typing" src='./images/Pixel Art/Me-typing-Sheet.png' id='header-sprite'/>
                         </div>
                     </div>
-                </div>      
+                </div>
+      
             </div>           
         </section>
         <section class='container-fluid section-container bg-theme-green' id='about-me'>
-            <div class='position-relative w-100'>   
-                <div class='character-frame d-none' style='top:0%; right:0%;'>
-                    <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='about-me-sprite'/>
-                </div>    
-
-            </div>              
+            <div class="custom-shape-divider-bottom-1615180636">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M992.25 0L0 0 0 250 1200 150 1200 0z" class="shape-fill"></path>
+                </svg>
+            </div>
             <div class='row'>
-                <div class='col text-center pt-5'>
-                    <h1 class='section-header pt-5'>About Me</h1>
-                </div>
-            </div>
-            <div class='row mt-4 mt-xl-0 mb-xl-n5'>
-                <div class='col-xl-4 offset-xl-8 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center'>
-                    <div class='info-box bg-white d-none p-3' id='info-box-right'>
-                        <h3 class='text-center info-box-title mb-3'>Education</h3>
-                        <div class='info-box-text'>
-                            <p>- Mohawk College 3 Year Advanced Diploma</p>
-                        </div>
-
-                    </div>
-                    <div class='line top-border ' id='top-border-right'>
-
-                    </div>
-                </div>
-            </div>
-            <div class='row mt-xl-n5 my-5'>
-                <div class='col-xl-4 offset-xl-0 col-md-10 offset-md-1 col-sm-12 justify-content-lg-center mt-xl-n5'>
-                    <div class='info-box bg-white d-none p-3' id='info-box-left'>
-                        <h3 class=' info-box-title mb-3 text-center'>Hobbies</h3>
-                        <div class='info-box-text'>
-                            <p>- Game Development</p>
-                            <p>- Music</p>
-                            <p>- Basketball</p>                                    
-                        </div>
-                    </div>
-                    <div class='line top-border' id='top-border-left' >
-
-                    </div>
-                </div>
-            </div>
-            <svg class='position-absolute line d-none' style='top:44vh; left:42vw' height="50vh" width="50vw" id='line-1'>
-                <line x1="100%" y1="0" x2="30%" y2="310" style="stroke:rgb(255,255,255);stroke-width:5"/>
-            </svg>
-            <svg class='position-absolute line d-none' style='top:50vh; left:15vw;' height="50vh" width="50vw" id='line-2'>
-                <line x1="20%" y1="0" x2="40%" y2="50%" style="stroke:rgb(255,255,255);stroke-width:5"/>
-            </svg>
-            <div class='row d-flex justify-content-center mt-xl-n4'>
-                <div class='col-xl-4 col-md-10 col-sm-12'>
-                    <div class='info-box bg-white d-none p-3' id='info-box-center'>
-                        <h3 class='text-center info-box-title mb-3'>Goals</h3>
-                        <div class='row'>
-                            <div class='col text-center'>
-                                <div class='info-box-text'>
-                                    <p class='info-box-subtitle'>Current Goals: </p>
-                                    <p class="adjustable-text-size">        - Master C# (Unity, ASP.NET), and Node.Js Tech Stacks</p>
-                                    <p class="adjustable-text-size">        - Learn Web Assembly, Containerization, and Blazor</p>                                    
+                <div class='col-5 about-me-heading-container'>
+                    <div class='ml-5'>
+                        <div class='container text-center text-light'>
+                            <div class='row'>
+                                <div class='col'>
+                                    <h1 class='section-header'>About Me</h1>
                                 </div>
                             </div>
-                            <div class='col text-center'>
-                                <div class='info-box-text border-left'>                                 
-                                    <p class='info-box-subtitle'>Career Goals:</p> 
-                                    <p class="adjustable-text-size">    - Become a Software Architect</p>
-                                    <p class="adjustable-text-size">    - Start My Own Game Copmany</p>
-                                    
+                            <div class='row'>
+                                <div class='col'>
+                                    <p class='about-me-sub-header'>A summary of who I am, and who I want to be.</p>
                                 </div>
                             </div>
+        
                         </div>
-                        
                     </div>
-                    <div class='line top-border' id='top-border-center'>
+                </div>
+                <div class='col-7 about-me-heading-container'>
+                    <div class='container bg-white'>
+                        <ul class="nav nav-tabs" id="tabs-list" role="tablist">
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">Education</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link" id="goals-tab" data-toggle="tab" href="#goals" role="tab" aria-controls="goals" aria-selected="false">Goals</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                              <a class="nav-link" id="hobbies-tab" data-toggle="tab" href="#hobbies" role="tab" aria-controls="hobbies" aria-selected="false">Hobbies</a>
+                            </li>
+                        </ul>
 
                     </div>
                 </div>
-
             </div>
             
+
+            
         </section>
-        <section class='container-fluid section-container bg-theme-purple' id='my-works'>
+            
+        <section class='container-fluid bg-primary' id='my-skills'>
             <div class='row'>
-                <div class='col text-center pt-5'>
-                    <h1 class='section-header pt-5'>My Works</h1>
+                <div class='col text-center pt-4'>
+                    <h1 class='section-header py-4 text-white'>My Skills</h1>
                 </div>
             </div>
             <div class='row'>
                 <div class='col'>
-                    
+                    <div class="honeycomb-grid-container">
+                        <div class="honeycomb-grid-container-item">
+                            <img class="hexagon" src='images/logos/Java.png'/> 
+                            <div class='tech-experience-box'>
+
+                            </div>
+                        </div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/c-sharp.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/unity-tab-square-black.png'/></div>
+                        <div class="honeycomb-grid-container-item "><img class="hexagon" src='images/logos/nodejs.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/react.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/javascript.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/html.png'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/CSS3.jpg'/></div>
+                        <div class="honeycomb-grid-container-item"><img class="hexagon" src='images/logos/bootstrap.png'/></div>
+                        
+                        
+
+                    </div>
                 </div>
-                <div class='col'>
-                    
+            </div>
+        </section>
+        <section class='container-fluid bg-theme-purple' id='my-works'>
+            <div class='row'>
+                <div class='col text-center pt-4'>
+                    <h1 class='section-header py-4 text-white'>My Works</h1>
                 </div>
-                <div class='col'>
-                    
+            </div>
+            <div class='row'>
+                <div class='col-xl-2 offset-xl-2 col-lg-4'>
+                    <div class="card fixed-card-height" >
+                        <div class='card-header'>
+                            <img src="./images/project_pics/bandtogetherpic.jpg" class="card-img-top cardImage" alt="...">
+                            <a href="https://www.bandtogether.ca" class="btn btn-primary">Go To Project</a>
+                        </div>             
+                        <div class="card-body">
+                          <h5 class="card-title">Band Together</h5>
+                          <p class="card-text">A social media website for musicians. The project is built with Node.js with express, React, and Microsoft SQL Server. </p>
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class='col-xl-2 offset-xl-1 col-lg-4'>
+                    <div class="card fixed-card-height">
+                        <div class='card-header'>
+                            <img src="./images/project_pics/dodgeball-logo.jpg" class="card-img-top cardImage" alt="...">
+                            <a href="/2D_Dodgeball.html" class="btn btn-primary">Go To Project</a>
+                        </div>
+                        
+                        <div class="card-body">
+                          <h5 class="card-title">2D Dodgeball</h5>
+                          <p class="card-text">A game built in unity where you go head to head against a dodgeball AI that I built. First to 5 points wins.</p>
+                          
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class='col-xl-2 offset-xl-1 col-lg-4'>
+                    <div class="card fixed-card-height">
+                        <div class='card-header'>
+                            <img src="./images/project_pics/chatapp.jpg" class="card-img-top cardImage" alt="...">
+                            <a href="https://github.com/BeauCranston/SignalR-Chat-app" class="btn btn-primary">Go To Project</a>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Signal R Chat App</h5>
+                          <p class="card-text">A chat app made with websockets using Signal-R and Asp.Net Core.</p>
+                          
+                        </div>
+                    </div>         
+                </div>
+                
+            </div>
+            <div class='row mt-5'>
+                <div class='col-xl-2 offset-xl-2 col-lg-4'>
+                    <div class="card fixed-card-height" >
+                        <div class='card-header'>
+                            <img src="./images/elsweyr/pageBackground.jpg" class="card-img-top cardImage" alt="...">
+                            <a href="/Elsweyr.html" class="btn btn-primary">Go To Project</a>
+                        </div>
+                        <div class="card-body">
+                          <h5 class="card-title">Elsweyr</h5>
+                          <p class="card-text">My first ever browser game. Basically rolling dice with a themed ui.</p>
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class='col-xl-2 offset-xl-1 col-lg-4'>
+                    <div class="card fixed-card-height">
+                        <div class='card-header'>
+                            <img src="./images/project_pics/blackjack.jpg" class="card-img-top cardImage" alt="...">
+                            <a href="https://github.com/BeauCranston/BlackJack" class="btn btn-primary">Go To Project</a>
+                        </div>
+                        
+                        <div class="card-body">
+                          <h5 class="card-title">BlackJack</h5>
+                          <p class="card-text">A multithreaded server-client black jack application made in Java </p>
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class='col-xl-2 offset-xl-1 col-lg-4'>
+                    <div class="card fixed-card-height">
+                        <div class='card-header'>
+                            <img src="./images/project_pics/ExpressionTree.png" class="card-img-top cardImage" alt="...">
+                            <a href="https://github.com/BeauCranston/Expression-Trees" class="btn btn-primary">Go To Project</a>
+                        </div>                
+                        <div class="card-body">
+                          <h5 class="card-title">Expression Trees</h5>
+                          <p class="card-text">Takes a reverse polish notation expression as an input and dynamically builds an expression tree to solve.</p>
+                        </div>
+                    </div>         
                 </div>
                 
             </div>
             
         </section>
-
+        <section class='container-fluid section-container bg-dark' id='contact'>
+            <div class='row'>
+                <div class='col text-center pt-5'>
+                    <h1 class='section-header pt-5 text-white' id='contact'>Contact</h1>
+                </div>
+            </div>
+            <div class='row text-center text-white my-4'>
+                <div class='col'>
+                    <h4 class='gontserrat'> Email: beau.cranston@mohawkcollege.ca</h4>
+                </div>
+            </div>
+            <div class='row mt-5 pt-5'>
+                <div class='col-lg-3 offset-lg-1 col-10 offset-1 d-flex justify-content-center'>
+                    <a href="https://github.com/BeauCranston"><img src='./images/logos/GitHub-Mark-Light-120px-plus.png' class='contact-container grow-on-hover'/></a>            
+                </div>
+                <div class='col-lg-4 col-10 d-flex offset-1 offset-lg-0 justify-content-center my-5 my-lg-0'>
+                    <a href="https://www.linkedin.com/in/beau-cranston-94b9931a0/"><img src='./images/logos/LI-In-Bug.png' class='contact-container grow-on-hover'/></a>
+                </div>
+                <div class='col-lg-3 col-10 d-flex offset-1 offset-lg-0 justify-content-center'>
+                    <a href=""><img src='./images/logos/HackerRank_logo.png' class='contact-container grow-on-hover'/></a>
+                </div>
+            </div>
+        </section>
         
     </div>
-    <footer class='bg-dark' id='contact'>
-        <div class='row'>
-            <div class='col text-center pt-5'>
-                <h1 class='section-header pt-5' id='contact'>Contact</h1>
-            </div>
-        </div>
-        <div class='row'>
-            <div class='col'>
-
-            </div>
-        </div>
-    </footer>
+    
   </body>
 </html>

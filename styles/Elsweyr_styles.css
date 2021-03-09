@@ -13,7 +13,7 @@ h1 {
 }
 
 .bg {
-  background-image: url("pageBackground.jpg");
+  background-image: url("../images/elsweyr/pageBackground.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;

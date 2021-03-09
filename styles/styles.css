@@ -13,26 +13,51 @@
     src:url('../Fonts/Rounded_Elegance.ttf')
 }
 
+@font-face{
+    font-family: Dogica;
+    src:url('../Fonts/dogicapixel.ttf')
+}
+
+@font-face{
+    font-family:Poxel;
+    src:url('../Fonts/poxel-font.ttf')
+}
+
 .bg-theme-green{
     background-color:#67b896;
 
 }
+.text-theme-green{
+    color:#67b896;
 
+}
 .bg-theme-purple{
     background-color:#ab32db;
 }
 .bg-theme-navy{
     background-color: #25397E;
 }
+
+.gontserrat{
+    font-family: Gontserrat;
+}
+.r-e{
+    font-family: Rounded-Elegance;
+}
+.dogica{
+    font-family: Dogica;
+}
+.poxel{
+    font-family: Poxel;
+}
+
 body, html{
     padding:0;
     margin: 0;
     scroll-behavior: smooth;
 }
 
-.gontserrat{
-    font-family: Gontserrat;
-}
+
 .nav-link-space{
     margin-right: 15vw;
     margin-left: 15vw;
@@ -43,22 +68,27 @@ body, html{
     font-family: Gontserrat;
 }
 .section-header{
-    color:#eee;
-    font-family:Generica;
-    font-weight: 700;
+    /* color:#eee; */
+    font-family:Rounded-Elegance;
+    font-weight: 300;
     font-size: 4em;
     
 }
-.section-container{
-    height:100vh;
+
+
+.grow-on-hover{
+    transform: scale(1) ;
+    transition: transform 0.5s;
+}
+
+.grow-on-hover:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
 }
 /* =====================================HERO CONTAINER STUFF!!=========================================== */
 .hero-container{
-    background-image: url('../images/keyboard.jpg');
-    background-size: cover;
     height: 100vh;
     background-color: #25397E;
-    box-shadow:inset 0 0 0 2000px rgba(37, 57, 126, 0.6);
     padding:0;
 }
 .animation-container{
@@ -69,12 +99,12 @@ body, html{
 }
 .avatar{
     border-radius: 50%;
-    width:17vw;
-    height: 17vw;
+    width:15vw;
+    height: 15vw;
     min-width: 200px;
     min-height:200px;
     position: absolute; 
-    background-image: url('../images/me.jpg');
+    background-image: url('../images/home/me.jpg');
     background-size: cover;
     
 }
@@ -84,24 +114,7 @@ body, html{
     display: flex;
     justify-content: center;
 }
-.fixed-bottom{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-.triangle{
-    width: 0;
-    height: 0;
-    border-left: 100px solid transparent;
-    border-right: 100px solid transparent;
-    border-bottom: 140px solid #67b896;
 
-}
-
-#destroyButton{
-    margin-top: 50px;
-    margin-left:-11px;
-}
 .pixel-art{
     image-rendering: pixelated;
 }
@@ -111,15 +124,41 @@ body, html{
     overflow: hidden; 
     position: absolute;
 }
+
+#title{
+    font-size: 6em;
+
+}
+#subtitle{
+    font-size: 4em;
+
+}
 /* ======================================= ABOUT ME STUFF ==================================================== */
 
+
+.about-me-heading-container{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+      
+}
+
+.about-me-sub-header{
+    font-size: 2em;
+    font-family:Gontserrat;
+}
+
 .info-box{
-    border-radius: 10px;
     width:100%;
-    height: 300px;
+    height: auto;
+    border-radius: 10px;
+    border: #7202f2 solid 2px;
+    /* box-shadow: 2px 4px rgba(0,0,0,0.4); */
 }
 .top-border{
-    border-top: 2px solid white;
+    border-top: 2px solid #7202f2;
     width:100%;
     height:300px;
     background-color: transparent;
@@ -128,25 +167,180 @@ body, html{
 .info-box-title{
     font-size: 2em;
     font-family: gontserrat;
-    color:#333;
+    color:#7202f2;
 
 }
 .info-box-subtitle{
     font-size: 1.2em;
     font-family: gontserrat;
-    color:#333;
+    color:#7202f2;
     margin-bottom: 0.7em;
 }
 .info-box-text{
     font-size: 1.1em;
     font-family: sans-serif;
-    color:#333;
+    color:#7202f2;
 }
+
+.tech-icon{
+    border-radius: 50%;
+    width:60px;
+    height:60px;
+}
+
+
 
 #top-border-left{
     margin-top: -150px;
     margin-bottom: 50px;
 }
+
+/*====================================================================== MY SKILLS STUFF================================================================================ */
+.honeycomb-grid-container{
+    display: grid;
+    grid-template-columns: repeat(10, 100px);
+    grid-column-gap: 5px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+    width: 1040px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.honeycomb-grid-container-item{
+    grid-column: span 2;
+    width: 200px;
+    padding: 0 0 230px 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    overflow: hidden;
+    visibility: hidden;
+    margin-top: -50px;
+}
+  
+.honeycomb-grid-container-item:nth-child(9n+1){ grid-column-start: 1;}
+.honeycomb-grid-container-item:nth-child(9n+2){ grid-column-start: 3;}
+.honeycomb-grid-container-item:nth-child(9n+3){ grid-column-start: 5;}
+.honeycomb-grid-container-item:nth-child(9n+4){ grid-column-start: 7;}
+.honeycomb-grid-container-item:nth-child(9n+5){ grid-column-start: 9;}
+.honeycomb-grid-container-item:nth-child(9n+6){ grid-column-start: 2;}
+.honeycomb-grid-container-item:nth-child(9n+7){ grid-column-start: 4;}
+.honeycomb-grid-container-item:nth-child(9n+8){ grid-column-start: 6;}
+.honeycomb-grid-container-item:nth-child(9n){ grid-column-start: 8;}
+  
+.hexagon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("https://picsum.photos/250/250/?image=870"); */
+    object-fit:cover;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+    
+}
+.hexagon:hover{
+    transform: skewY(-30deg) rotate(60deg) scale(1.1);
+    transition: transform 0.5s ease-in-out;
+  
+}
+      
+.honeycomb-grid-container-item *{
+    visibility: visible
+}
+  
+  /**** Responsive wizardry ****/
+  
+@media(max-width: 1100px){
+    .honeycomb-grid-container{
+        grid-template-columns: repeat(8, 100px);
+        width: 830px
+    }
+    .honeycomb-grid-container-item:nth-child(7n+1){ grid-column-start: 1;}
+    .honeycomb-grid-container-item:nth-child(7n+2){ grid-column-start: 3;}
+    .honeycomb-grid-container-item:nth-child(7n+3){ grid-column-start: 5;}
+    .honeycomb-grid-container-item:nth-child(7n+4){ grid-column-start: 7;}
+    .honeycomb-grid-container-item:nth-child(7n+5){ grid-column-start: 2;}
+    .honeycomb-grid-container-item:nth-child(7n+6){ grid-column-start: 4;}
+    .honeycomb-grid-container-item:nth-child(7n){ grid-column-start: 6;}
+}
+  
+@media(max-width: 850px){
+    .honeycomb-grid-container{
+        grid-template-columns: repeat(6, 100px);
+        width: 620px
+    }
+    .honeycomb-grid-container-item:nth-child(5n+1){ grid-column-start: 1;}
+    .honeycomb-grid-container-item:nth-child(5n+2){ grid-column-start: 3;}
+    .honeycomb-grid-container-item:nth-child(5n+3){ grid-column-start: 5;}
+    .honeycomb-grid-container-item:nth-child(5n+4){ grid-column-start: 2;}
+    .honeycomb-grid-container-item:nth-child(5n){ grid-column-start: 4;}
+  }
+  
+@media(max-width: 720px){
+    .honeycomb-grid-container{
+        grid-template-columns: repeat(4, 100px);
+        width: 410px;
+    }
+    .honeycomb-grid-container-item:nth-child(3n+1){ grid-column-start: 1;}
+    .honeycomb-grid-container-item:nth-child(3n+2){ grid-column-start: 3;}
+    .honeycomb-grid-container-item:nth-child(3n){ grid-column-start: 2;}
+  }
+
+/* =====================================MY WORKS STUFF================================================================= */
+
+.cardImage{
+    width:100%;
+    height:150px;  
+}
+
+.fixed-card-height{
+    height:350px;
+}
+
+.card-header{
+    position: relative;
+}
+.card-header a{
+    position: absolute;
+    left:30%;
+    top:45%;
+    visibility: hidden;
+}
+.card-header .cardImage{
+    opacity: 1;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+
+}
+.card-header:hover .cardImage{
+    opacity: 0.2;
+}
+.card-header:hover a{
+    visibility: visible;
+}
+
+
+/* ====================================CONTACT STUFF======================================================================== */
+
+.contact-container{
+    border-radius: 50%;
+    width:250px;
+    height:250px;
+}
+
 
 /* =======================================ANIMATION CLASSES =========================================================== */
 
@@ -167,13 +361,15 @@ body, html{
     
 }
 
-
+.sprite-typing{
+    animation: stepThroughSpriteSheet 0.3s steps(3) infinite;
+}
 .spritesheet{
-    animation: moveSprite 1s steps(7) infinite;
+    animation: stepThroughSpriteSheet 1s steps(7) infinite;
 }
 
 .header-sprite-animation{
-    animation: translateRight 3s linear 1;
+    animation: translateRight 2.5s linear 1;
 }
 
 .shake {
@@ -271,7 +467,7 @@ body, html{
     10% {bottom:0; left:40%;}
     100%{bottom:0; left:100%;}
 }
-@keyframes moveSprite{
+@keyframes stepThroughSpriteSheet{
     from{
         transform: translate3d(0px,0,0);
         -moz-transform: translate3d(0px,0,0);
@@ -297,8 +493,8 @@ body, html{
 @keyframes rotate { 100%{-webkit-transform: rotate(360deg); transform:rotate(360deg);}}
 
 @keyframes translateRight{
-    0% {transform:translateX(0); bottom: -15px;}
-    100%{transform:translateX(50vw); bottom: -15px;}
+    0% {transform:translateX(0); bottom: -165px;}
+    100%{transform:translateX(50vw); bottom: -165px;}
 }
 
 @keyframes shake {
@@ -374,7 +570,77 @@ body, html{
     .adjustable-text-size{
         font-size: 0.8em;
     }
-    
+    .fixed-bottom{
+        display: none;
+    }
+    .cardImage{
+        max-width: 300px;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #my-works{
+        height: 250vh;
+    }
+
+    .card-header a{
+        left:45%;
+
+    }
+
+
 }
 
 
+@media only screen and (max-width: 768px) {
+    .card-header a{
+        left:40%;
+
+    }
+}
+
+/* =====================================================================BACKGROUND SVG STUFF!!================================================================================== */
+/* WAVE OPACITY HEADER */
+.custom-shape-divider-bottom-1615176798 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1615176798 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1615176798 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+/* triangle */
+.custom-shape-divider-bottom-1615180636 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1615180636 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 183px;
+}
+
+.custom-shape-divider-bottom-1615180636 .shape-fill {
+    fill: #32805a;
+}
