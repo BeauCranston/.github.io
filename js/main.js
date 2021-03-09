@@ -1,4 +1,8 @@
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 $(".main").onepage_scroll({
     sectionContainer: "section",  
     easing: "ease",                   
@@ -7,17 +11,18 @@ $(".main").onepage_scroll({
     beforeMove: function(index) {},   
     afterMove: function(index) {
         switch(index){
-            case 2:
-                playAboutMeAnimation();
+            case 2:      
                 window.history.pushState('','About Me','#about-me')
+                playAboutMeAnimation();
                 break;
-            // case 3:
-            //     window.location.replace('#my-skills')
-            //     break;
             case 3:
-                window.history.pushState('','My Works','#my-works')
+                window.history.pushState('','My Skills','#my-skills')
+                playMySkillsAnimation();
                 break;
             case 4:
+                window.history.pushState('','My Works','#my-works')
+                break;
+            case 5:
                 window.history.pushState('','Contact','#contact')
                 break;
             default:
@@ -52,13 +57,11 @@ $("#my-works-link").click((event)=>{$('.main').moveTo(3)})
 $("#contact-link").click((event)=>{$('.main').moveTo(4)})
 
 function characterSpriteAnimation(sprite, animation, src, end, callback){
-    var sprite = document.getElementById(sprite);
     var spriteContainer = sprite.parentElement;
     if(spriteContainer.classList.contains('d-none')){
         spriteContainer.classList.remove('d-none')
     }
     spriteContainer.classList.add(animation);
-    sprite.classList.add('spritesheet');
     sprite.src = src;
     spriteContainer.addEventListener('animationend', (event)=>{
         if(end){
@@ -72,21 +75,18 @@ function characterSpriteAnimation(sprite, animation, src, end, callback){
     });
 }
 
-
-// var destroyButton = document.getElementById('destroyButton');
-
-// destroyButton.addEventListener('click', (event)=>{
-//     playHeaderAnimation();
-    
-// })
 var avatar = document.querySelector('#avatar');
 avatar.addEventListener('click', (event)=>{
+    playHeaderAnimation(event.target);
+})
+function playHeaderAnimation(avatar) { 
     var headerSprite = document.getElementById('header-sprite'); 
     avatar.classList.add('shake');
     headerSprite.src='./images/Pixel Art/Me-at-desk-scared.png'
     headerSprite.classList.remove('sprite-typing');
     avatar.addEventListener('animationend', ()=>{
-        characterSpriteAnimation('header-sprite', 'header-sprite-animation', './images/Pixel Art/me-run2-Sheet.png', true)
+        headerSprite.classList.add('spritesheet');
+        characterSpriteAnimation(headerSprite, 'header-sprite-animation', './images/Pixel Art/me-run2-Sheet.png', true)
         avatar.classList.remove('shake');
         avatar.classList.add('roll-away');
         avatar.addEventListener('animationend', ()=>{
@@ -97,28 +97,22 @@ avatar.addEventListener('click', (event)=>{
 
         });
     });
-})
-function playHeaderAnimation() { 
-    
 
 }
 
 function playAboutMeAnimation(){
-    characterSpriteAnimation('about-me-sprite', 'about-me-right-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
-        showInfoBox('info-box-right', 'top-border-right');
-        characterSpriteAnimation('about-me-sprite', 'about-me-right-run', './images/Pixel Art/me-run2-Sheet.png', false, ()=>{
-            characterSpriteAnimation('about-me-sprite', 'about-me-right-jump', './images/Pixel Art/me-jump-Sheet.png', false, ()=>{
-                characterSpriteAnimation('about-me-sprite', 'about-me-center-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
-                    showInfoBox('info-box-center', 'top-border-center');
-                    //fadeIn('line-1')
-                    characterSpriteAnimation('about-me-sprite', 'about-me-center-run', './images/Pixel Art/me-run2-Sheet.png', false, ()=>{
-                        characterSpriteAnimation('about-me-sprite', 'about-me-center-jump', './images/Pixel Art/me-jump-Sheet.png', false, ()=>{
-                            characterSpriteAnimation('about-me-sprite', 'about-me-left-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
-                                showInfoBox('info-box-left', 'top-border-left');
-                                //fadeIn('line-2')
-                                characterSpriteAnimation('about-me-sprite', 'about-me-left-run', './images/Pixel Art/me-run2-Sheet.png', true)
-                            });
+    var aboutMeSprite = document.getElementById('about-me-sprite');
+    aboutMeSprite.classList.add('spritesheet');
+    characterSpriteAnimation(aboutMeSprite, 'about-me-right-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
+        characterSpriteAnimation(aboutMeSprite, 'about-me-right-run', './images/Pixel Art/me-run2-Sheet.png', false, ()=>{
+            characterSpriteAnimation(aboutMeSprite, 'about-me-right-jump', './images/Pixel Art/me-jump-Sheet.png', false, ()=>{
+                characterSpriteAnimation(aboutMeSprite, 'about-me-center-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
+                    characterSpriteAnimation(aboutMeSprite, 'about-me-center-run', './images/Pixel Art/me-run2-Sheet.png', false, ()=>{
+                        characterSpriteAnimation(aboutMeSprite, 'about-me-left-fall', './images/Pixel Art/me-fall-Sheet.png', false, ()=>{
+                            aboutMeSprite.classList.remove('spritesheet')
+                            characterSpriteAnimation(aboutMeSprite, 'about-me-pipe-fall', './images/Pixel Art/me-idle.png', true);
                         });
+
                         
                     });
                 });
@@ -129,6 +123,17 @@ function playAboutMeAnimation(){
     
 }
 
+function playMySkillsAnimation(){
+    var mySkilsSprite = document.getElementById('my-skills-sprite');
+    mySkilsSprite.classList.add('spritesheet');
+    characterSpriteAnimation(mySkilsSprite, 'my-skills-left-fall','./images/Pixel Art/me-fall-Sheet.png', false, ()=>{
+        characterSpriteAnimation(mySkilsSprite, 'my-skills-hit-container','./images/Pixel Art/me-fall-Sheet.png', false, ()=>{
+            characterSpriteAnimation(mySkilsSprite, 'my-skills-plunge','./images/Pixel Art/me-scared-fall-Sheet.png', true, ()=>{
+
+            });
+        });
+    });
+}
 
 function showInfoBox(infoBox, topBorder){
     var border = document.getElementById(topBorder)

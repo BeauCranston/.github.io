@@ -32,7 +32,10 @@
 
 }
 .bg-theme-purple{
-    background-color:#ab32db;
+    background-color:#7202f2;
+}
+.text-theme-purple{
+    color:#7202f2;
 }
 .bg-theme-navy{
     background-color: #25397E;
@@ -74,8 +77,6 @@ body, html{
     font-size: 4em;
     
 }
-
-
 .grow-on-hover{
     transform: scale(1) ;
     transition: transform 0.5s;
@@ -123,6 +124,7 @@ body, html{
     height:160px;
     overflow: hidden; 
     position: absolute;
+    z-index: 100;
 }
 
 #title{
@@ -150,36 +152,19 @@ body, html{
     font-family:Gontserrat;
 }
 
-.info-box{
-    width:100%;
-    height: auto;
-    border-radius: 10px;
-    border: #7202f2 solid 2px;
-    /* box-shadow: 2px 4px rgba(0,0,0,0.4); */
-}
-.top-border{
-    border-top: 2px solid #7202f2;
-    width:100%;
-    height:300px;
-    background-color: transparent;
-}
-
 .info-box-title{
     font-size: 2em;
     font-family: gontserrat;
-    color:#7202f2;
 
 }
 .info-box-subtitle{
     font-size: 1.2em;
     font-family: gontserrat;
-    color:#7202f2;
-    margin-bottom: 0.7em;
+
 }
 .info-box-text{
     font-size: 1.1em;
     font-family: sans-serif;
-    color:#7202f2;
 }
 
 .tech-icon{
@@ -187,14 +172,31 @@ body, html{
     width:60px;
     height:60px;
 }
-
-
-
-#top-border-left{
-    margin-top: -150px;
-    margin-bottom: 50px;
+.about-me-content-container{
+    height:600px;
+    
+}
+.about-me-content{
+    margin-top: 2em;
+}
+#about-me-info-container{
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.2);
 }
 
+
+.pipe-container{
+    position: relative;
+    bottom: 21%;
+    left:1%;
+}
+.pipe{
+    position: absolute;
+    width: 260px;
+    height:260px;
+    z-index: 101;
+}
 /*====================================================================== MY SKILLS STUFF================================================================================ */
 .honeycomb-grid-container{
     display: grid;
@@ -402,57 +404,75 @@ body, html{
     
     animation: aboutMeCenterRun 1.0s linear 1;
 }
-.about-me-center-jump{
-    
-    animation: aboutMeCenterJump 1s linear 1;
-}
+
 .about-me-left-fall{
     animation: aboutMeLeftFall 0.5s linear 1;
 }
-.about-me-left-run{
+.about-me-pipe-fall{
     
-    animation: aboutMeLeftRun 2.0s linear 1;
+    animation: aboutMePipeFall 2.0s linear 1;
 }
 @keyframes aboutMeRightFall{
     0%{ transform-origin: top right; transform: scaleX(-1) translate(0,0);}
-    100%{ transform: scaleX(-1) translate(1vw, 3vh);}
+    100%{ transform: scaleX(-1) translate(4vw, 3vh);}
 
 }
 @keyframes aboutMeRightRun{
-    0%{transform-origin: 1vw, 3vh; transform:translate(1vw, 3vh)scaleX(-1);}
-    100%{transform:translate(-24vw,3vh) scaleX(-1);}
+    0%{transform-origin: 4vw, 3vh; transform:translate(-4vw, 3vh)scaleX(-1);}
+    100%{transform:translate(-38vw,3vh) scaleX(-1);}
 
 }
 @keyframes aboutMeRightJump{
-    0%{transform-origin: -24vw,3vh; transform:translate(-24vw,3vh)scaleX(-1);}
-    100%{transform:translate(-30vw,0.5vh) scaleX(-1);}
+    0%{transform-origin: -38vw,3vh; transform:translate(-38vw,3vh)scaleX(-1);}
+    100%{transform:translate(-50vw,0.5vh) scaleX(-1);}
 
 }
 @keyframes aboutMeCenterFall{
-    0%{transform-origin: -30vw,0.5vh; transform:translate(-30vw,0.5vh)scaleX(-1);}
-    100%{transform:translate(-34vw,50vh) scaleX(-1);}
+    0%{transform-origin: -50vw,0.5vh; transform:translate(-50vw,0.5vh)scaleX(-1);}
+    100%{transform:translate(-57vw,25vh) scaleX(-1);}
 
 }
 @keyframes aboutMeCenterRun{
-    0%{transform-origin: -34vw,50vh; transform:translate(-34vw,50vh)scaleX(-1);}
-    100%{transform:translate(-46vw,50vh) scaleX(-1);}
-
-}
-@keyframes aboutMeCenterJump{
-    0%{transform-origin: -46vw,50vh; transform:translate(-46vw,50vh)scaleX(-1);}
-    100%{transform:translate(-58vw,8vh) scaleX(-1);}
+    0%{transform-origin: -57vw,25vh; transform:translate(-57vw,25vh)scaleX(-1);}
+    100%{transform:translate(-80vw,25vh) scaleX(-1);}
 
 }
 @keyframes aboutMeLeftFall{
-    0%{transform-origin: -58vw,8vh; transform:translate(-58vw,8vh)scaleX(-1);}
-    100%{transform:translate(-64vw,10vh) scaleX(-1);}
+    0%{transform-origin: -80vw,25vh; transform:translate(-80vw,25vh)scaleX(-1);}
+    100%{transform:translate(-84vw,51vh) scaleX(-1);}
 
 }
-@keyframes aboutMeLeftRun{
-    0%{transform-origin: -64vw,10vh; transform:translate(-64vw,10vh)scaleX(-1);}
-    100%{transform:translate(-100vw,10vh) scaleX(-1);}
+@keyframes aboutMePipeFall{
+    0%{transform-origin: -84vw,51vh; transform:translate(-84vw,51vh)scaleX(-1);}
+    100%{transform:translate(-84vw,64vh) scaleX(-1);}
 
 }
+/* ==================================MY SKILLS ANIMATIONS ============================================================= */
+.my-skills-left-fall{
+    animation: mySkillsLeftFall 0.5s linear 1;
+}
+.my-skills-hit-container{
+    animation: mySkillsHitContainer 0.2s linear 1;
+}
+.my-skills-plunge{
+    animation: mySkillsPlunge 1.5s linear 1;
+}
+@keyframes mySkillsLeftFall{
+    0%{ transform-origin: top left; transform: translate(4.5vw,0);}
+    100%{ transform: translate(4.5vw, 13vh);}
+
+}
+@keyframes mySkillsHitContainer{
+    0%{ transform-origin: 4.5vw, 13vh; transform: translate(4.5vw, 13vh);}
+    100%{ transform: translate(1vw, 12vh) rotateZ(-30deg);}
+
+}
+@keyframes mySkillsPlunge{
+    0%{ transform-origin: 1vw, 12vh; transform: translate(-1vw,12vh)rotateZ(-30deg);}
+    100%{ transform: translate(-1vw, 100vh) rotateZ(-90deg);}
+
+}
+
 /*================================= ANIMATION KEY FRAMES ===============================================================*/
 @keyframes fade-text{
     from{
@@ -588,8 +608,12 @@ body, html{
         left:45%;
 
     }
-
-
+    .about-me-heading-container{
+        height:30vh;
+    }
+    .about-me-content-container{
+        height:500px;
+    }
 }
 
 

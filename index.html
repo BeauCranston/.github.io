@@ -64,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="row align-items-center " style="height:180px;" id='animation-container'>
+                <div class="row align-items-center " style="height:160px;" id='animation-container'>
                     <div class='col-2 offset-5 d-flex justify-content-center'>
                         <div class='character-frame' >
                             <img class="pixel-art sprite-typing" src='./images/Pixel Art/Me-typing-Sheet.png' id='header-sprite'/>
@@ -80,10 +80,13 @@
                     <path d="M992.25 0L0 0 0 250 1200 150 1200 0z" class="shape-fill"></path>
                 </svg>
             </div>
+            <div class='character-frame d-none' style='top:0%; right:0%;'>
+                <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='about-me-sprite'/>
+            </div>
             <div class='row'>
-                <div class='col-5 about-me-heading-container'>
+                <div class='col-lg-5 col-12 about-me-heading-container'>
                     <div class='ml-5'>
-                        <div class='container text-center text-light'>
+                        <div class='container text-center text-light '>
                             <div class='row'>
                                 <div class='col'>
                                     <h1 class='section-header'>About Me</h1>
@@ -91,36 +94,107 @@
                             </div>
                             <div class='row'>
                                 <div class='col'>
-                                    <p class='about-me-sub-header'>A summary of who I am, and who I want to be.</p>
+                                    <p class='about-me-sub-header fade-in'>A summary of who I am, and who I want to be.</p>
                                 </div>
                             </div>
         
                         </div>
                     </div>
                 </div>
-                <div class='col-7 about-me-heading-container'>
-                    <div class='container bg-white'>
+                <div class='col-lg-5 offset-lg-1 col-12 about-me-heading-container text-dark text-center'>
+                    <div class='container' id='about-me-info-container'>
                         <ul class="nav nav-tabs" id="tabs-list" role="tablist">
-                            <li class="nav-item" role="presentation">
-                              <a class="nav-link active" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">Education</a>
+                            <li class="nav-item " role="presentation">
+                              <a class="nav-link active gontserrat" id="education-tab" data-toggle="tab" href="#education" role="tab" aria-controls="education" aria-selected="true">Education</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <a class="nav-link" id="goals-tab" data-toggle="tab" href="#goals" role="tab" aria-controls="goals" aria-selected="false">Goals</a>
+                              <a class="nav-link gontserrat " id="goals-tab" data-toggle="tab" href="#goals" role="tab" aria-controls="goals" aria-selected="false">Goals</a>
                             </li>
                             <li class="nav-item" role="presentation">
-                              <a class="nav-link" id="hobbies-tab" data-toggle="tab" href="#hobbies" role="tab" aria-controls="hobbies" aria-selected="false">Hobbies</a>
+                              <a class="nav-link gontserrat " id="hobbies-tab" data-toggle="tab" href="#hobbies" role="tab" aria-controls="hobbies" aria-selected="false">Hobbies</a>
                             </li>
                         </ul>
+                        <div class="tab-content about-me-content-container" id="myTabContent">
+                            <div class="tab-pane fade show active" id="education" role="tabpanel" aria-labelledby="home-tab">
+                                <div class='about-me-content'>
+                                    <p class="info-box-title" >Education</p>
+                                    <ul class='list-group info-box-text'>
+                                        <li class='list-group-item'>Mohawk College 3 Year Advanced Diploma </li>
+                                        <li class='list-group-item'>Self Taught in React, Unity, Git, and Node.js </li>    
+                                    </ul>
+                                </div>
 
+                            </div>
+                            <div class="tab-pane fade" id="goals" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class='about-me-content'>
+                                    <p class="info-box-title" >Current Goals</p>
+                                    <ul class='list-group info-box-text'>
+                                        <li class='list-group-item'>
+                                            <div class="row align-items-center">
+                                                <div class='col-lg-2 col-1'>
+                                                    <span class='info-box-subtitle '>Learn: </span>
+                                                </div>
+                                                <div class='col-lg-8 col-11'>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/blazor.png' data-toggle="tooltip" data-placement="top" title="Blazor"/>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/docker.png' data-toggle="tooltip" data-placement="top" title="Containerization"/>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/web-assembly.png' data-toggle="tooltip" data-placement="top" title="Web Assembly"/>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/mongodb.png' data-toggle="tooltip" data-placement="top" title="MongoDB"/>
+                                                </div>
+                                            </div>                              
+                                        </li>
+                                        <li class='list-group-item'>
+                                            <div class="row align-items-center">
+                                                <div class='col-lg-2 col-1'>
+                                                    <span class='info-box-subtitle'>Master: </span>
+                                                </div>
+                                                <div class='col-lg-8 col-11'>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/net.png' data-toggle="tooltip" data-placement="top" title=".Net Core/Framework"/>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/react.png' data-toggle="tooltip" data-placement="top" title="React.js"/>
+                                                    <img class='tech-icon grow-on-hover' src='images/logos/nodejs.png' data-toggle="tooltip" data-placement="top" title="Node.js"/>
+                                                </div>
+                                            </div>                              
+                                        </li>
+                                    </ul>
+                                    <p class="info-box-title" >Career Goals</p>
+                                    <ul class='list-group info-box-text'>
+                                        <li class='list-group-item'>
+                                            <p class='info-box-text'>Become a software architect and service stakeholder needs directly through high level understanding of current technologies, and their benefits.</p> 
+                             
+                                        </li>
+                                        <li class='list-group-item'>
+
+                                            <p class='info-box-text'>Own a video game company and collaborate with other passionate game developers.</p>
+                           
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade " id="hobbies" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class='about-me-content'>
+                                    <p class="info-box-title" >Hobbies</p>
+                                    <ul class='list-group info-box-text '>
+                                        <li class='list-group-item'>Game development using Unity to create 2D games </li>
+                                        <li class='list-group-item'>Playing video games </li>
+                                        <li class='list-group-item'>Basketball (watching and playing)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
             </div>
-            
+
+            <div class='pipe-container d-none d-xl-block'>
+                <img class='pixel-art pipe' src='./images/Pixel Art/pipe.png'/>
+            </div>
 
             
         </section>
             
         <section class='container-fluid bg-primary' id='my-skills'>
+            <div class='character-frame d-none' style='top:0%; left:4.5vw;'>
+                <img src='./images/Pixel Art/me-idle.png' class="flip-x" id='my-skills-sprite'/>
+            </div>
             <div class='row'>
                 <div class='col text-center pt-4'>
                     <h1 class='section-header py-4 text-white'>My Skills</h1>
@@ -217,7 +291,7 @@
                 <div class='col-xl-2 offset-xl-1 col-lg-4'>
                     <div class="card fixed-card-height">
                         <div class='card-header'>
-                            <img src="./images/project_pics/blackjack.jpg" class="card-img-top cardImage" alt="...">
+                            <img src="./images/project_pics/blackjack.png" class="card-img-top cardImage" alt="...">
                             <a href="https://github.com/BeauCranston/BlackJack" class="btn btn-primary">Go To Project</a>
                         </div>
                         
