@@ -203,12 +203,13 @@
         $("body").addClass("viewing-page-"+next.data("index"))
 
         pos = ((page_index - 1) * 100) * -1;
-
-        if (history.replaceState && settings.updateURL == true) {
-            var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
-            history.pushState( {}, document.title, href );
-        }
+        //pos = 0;
+        // if (history.replaceState && settings.updateURL == true) {
+        //     var href = window.location.href.substr(0,window.location.href.indexOf('#')) + "#" + (page_index - 1);
+        //     history.pushState( {}, document.title, href );
+        // }
         el.transformPage(settings, pos, page_index);
+        
       }
     }
 

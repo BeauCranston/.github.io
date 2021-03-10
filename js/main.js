@@ -12,8 +12,8 @@ $(function () {
 //                             At my last co-op job I made small scale applications for the company using a Vanilla JS / ASP.NET Web API tech stack, and I got exposure to MVC as well.
 //                             During school I took 2 .NET Courses (.NET, and Advanced .NET respectively). I have experience with advanced concepts such as PLINQ, TAP, expression trees,
 //                             serialization, as well as frameworks such as Identity and Entity
-
-$('#c-sharp-content')
+var croopy = "croopy"
+ $('#c-sharp-content').data('content', `poop doop ${croopy}`);
 
 $(".main").onepage_scroll({
     sectionContainer: "section",  
@@ -50,7 +50,7 @@ $(".main").onepage_scroll({
 
 
 $("#about-me-link").click((event)=>{$('.main').moveTo(2)})
-$("#about-me-link").click((event)=>{$('.main').moveTo(3)})
+$("#my-skills-link").click((event)=>{$('.main').moveTo(3)})
 $("#my-works-link").click((event)=>{$('.main').moveTo(4)})
 $("#contact-link").click((event)=>{$('.main').moveTo(5)})
 
