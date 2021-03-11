@@ -189,7 +189,7 @@ body, html{
 .pipe-container{
     position: relative;
     bottom: 16.5%;
-    left:2.5vw;
+    left:2.9vw;
 }
 .pipe{
     position: absolute;
@@ -357,10 +357,10 @@ body, html{
 }
 
 .roll-away{
-    -webkit-animation:roll-away 4s linear 1, rotate 4s linear infinite;
-    -moz-animation:roll-away 4s linear 1 , rotate 4s linear infinite;
-    animation:roll-away 4s linear 1, rotate 4s linear infinite;
-    
+    -webkit-animation:roll-away 3.5s linear 1;
+    -moz-animation:roll-away 3.5s linear 1 ;
+    animation:roll-away 3.5s linear 1; 
+    /* , rotate 4s linear infinite; */
 }
 
 .sprite-typing{
@@ -469,9 +469,9 @@ body, html{
     }
 }
 @keyframes roll-away{
-    0% {bottom:40vh;}
-    25% {bottom:0; left:40%;}
-    100%{bottom:0; left:100%;}
+    0% {transform-origin:inherit; transform:translate(0,0)}
+    25% {transform: translateY(35vh);}
+    100%{transform-origin:inherit 35vh; transform:translate(60vw, 35vh) rotate(360deg);}
 }
 @keyframes stepThroughSpriteSheet{
     from{
